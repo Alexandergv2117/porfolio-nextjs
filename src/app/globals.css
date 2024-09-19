@@ -20,10 +20,9 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.description-experience span {
+  font-weight: 600;
+  color: #ffffff;
 }
 
 .gradient-text-random {
@@ -41,6 +40,12 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: animatedTextGradient 5s linear infinite;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 }
 
 @keyframes animatedTextGradient {
