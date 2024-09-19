@@ -2,8 +2,8 @@ import Profile from "./components/profile/profile";
 
 export default function Home() {
   return (
-    <main className="w-full">
-      <div className="w-full h-[80vh] space-y-6 sm:space-y-20">
+    <main className="w-full mt-36">
+      <div className="w-full space-y-6 sm:space-y-20">
         <Profile />
         <div className="w-full flex flex-col space-y-4">
           <h1
