@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 
 import NavBar from "./components/nav-bar";
 import "./globals.css";
+import { KEYWORDS } from "./constants/keywords";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -18,6 +19,11 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Alexandergv2117",
   description: "Personal website of Alexandergv2117",
+  keywords: KEYWORDS,
+  authors: {
+    name: "Alexander Garcia",
+  },
+  robots: "index, follow",
 };
 
 export default function RootLayout({
