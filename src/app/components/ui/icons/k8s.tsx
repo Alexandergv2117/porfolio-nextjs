@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-nocheck
+
 import type { SVGProps } from "react";
 const Kubernetes = (props: SVGProps<SVGSVGElement>) => (
   <svg
