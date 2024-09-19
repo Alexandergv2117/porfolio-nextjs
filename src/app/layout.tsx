@@ -28,10 +28,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-[60rem] relative flex flex-col justify-center items-center mx-auto`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-[60rem] relative flex flex-col justify-center items-center mx-auto px-2`}
       >
         <NavBar />
-        <div className="mt-32">{children}</div>
+        <div className="mt-32 w-full">{children}</div>
       </body>
     </html>
   );
