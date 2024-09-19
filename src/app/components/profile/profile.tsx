@@ -23,12 +23,12 @@ export default function Profile() {
               aria-label="Link to Github profile"
               href="https://github.com/Alexandergv2117"
               target="_blank"
-              className="flex rounded-full p-2 bg-white bg-opacity-10 w-auto"
+              className="flex rounded-full p-2 bg-white bg-opacity-10 w-auto hover:bg-opacity-20"
             >
               <Github width={"1.5rem"} height={"1.5rem"} />
             </Link>
           </li>
-          <li className="flex rounded-full p-2 bg-white bg-opacity-10 w-auto cursor-pointer">
+          <li className="flex rounded-full p-2 bg-white bg-opacity-10 w-auto cursor-pointer hover:bg-opacity-20">
             <Gmail width={"1.5rem"} height={"1.5rem"} />
           </li>
           <li>
@@ -36,7 +36,7 @@ export default function Profile() {
               aria-label="Link to Github profile"
               href="https://www.linkedin.com/in/alexander-garcia-vizcarra-329765257/"
               target="_blank"
-              className="flex rounded-full p-2 bg-white bg-opacity-10 w-auto"
+              className="flex rounded-full p-2 bg-white bg-opacity-10 w-auto hover:bg-opacity-20"
             >
               <LinkedIn width={"1.5rem"} height={"1.5rem"} />
             </Link>

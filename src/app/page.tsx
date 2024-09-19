@@ -9,7 +9,7 @@ export default function Home() {
           <h1 className="font-bold text-5xl sm:text-7xl gradient-text-random">
             Desarrollador de Software
           </h1>
-          <p className="text-balance text-gray-400 font-light sm:text-lg description-experience">
+          <p className="text-balance text-[#cdcdcd] font-light sm:text-lg description-experience">
             Desarrollador de software con más de dos años de experiencia,
             especializado en backend utilizando <span>Nodejs</span> y{" "}
             <span>Nestjs</span>. Gestión de infraestructura en <span>AWS</span>{" "}
