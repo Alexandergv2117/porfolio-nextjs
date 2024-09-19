@@ -25,3 +25,26 @@ body {
     text-wrap: balance;
   }
 }
+
+.gradient-text-random {
+  background: radial-gradient(
+    circle at 100%,
+    #facc15,
+    #38bdf8 25%,
+    #2563eb 50%,
+    #1761b1 75%,
+    #facc15 100%
+  );
+  font-weight: 600;
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animatedTextGradient 5s linear infinite;
+}
+
+@keyframes animatedTextGradient {
+  to {
+    background-position: 200% center;
+  }
+}

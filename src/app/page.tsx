@@ -7,7 +7,7 @@ export default function Home() {
         <Profile />
         <div className="w-full flex flex-col space-y-4">
           <h1
-            className="font-bold text-5xl sm:text-7xl bg-gradient-to-r from-yellow-400 from-15% via-sky-400 to-blue-600 bg-clip-text text-transparent">
+            className="font-bold text-5xl sm:text-7xl gradient-text-random">
               Desarrollador de Software
           </h1>
           <p className="text-balance text-gray-400 font-light sm:text-lg">
