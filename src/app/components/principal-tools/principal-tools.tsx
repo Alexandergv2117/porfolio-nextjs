@@ -15,7 +15,7 @@ export default function PrincipalTools() {
       <h2 className="text-4xl font-semibold text-sky-300">
         Herramientas y tecnologías favoritas
       </h2>
-      <div className="flex flex-wrap gap-6 py-3 justify-between sm:justify-start">
+      <div className="flex flex-wrap gap-6 py-10 justify-between sm:justify-start">
         <Nodejs className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem]" />
         <NestJS className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem]" />
         <Nextjs className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem]" />
