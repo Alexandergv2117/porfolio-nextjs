@@ -6,7 +6,7 @@ export default function WorkExperience() {
   return (
     <section>
       <h2 className="text-4xl font-semibold text-sky-300">
-        Experiencia Laboral
+        Experiencia laboral
       </h2>
       <div className="flex flex-col gap-4 mt-6">
         {WORKS.map((work, index) => (

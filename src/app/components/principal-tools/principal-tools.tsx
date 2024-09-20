@@ -11,7 +11,7 @@ import Terraform from "../ui/icons/terraform";
 
 export default function PrincipalTools() {
   return (
-    <section>
+    <section className="pt-10 sm:pt-0">
       <h2 className="text-4xl font-semibold text-sky-300">
         Herramientas y tecnologías favoritas
       </h2>
