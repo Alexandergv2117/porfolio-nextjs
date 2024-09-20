@@ -7,6 +7,7 @@ const Gmail = (props: SVGProps<SVGSVGElement>) => (
     height="1em"
     {...props}
   >
+    <title className="tooltip-text">Gmail</title>
     <g fill="none" fillRule="evenodd">
       <g fillRule="nonzero">
         <path

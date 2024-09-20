@@ -8,6 +8,7 @@ const Nextjs = (props: SVGProps<SVGSVGElement>) => (
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
+    <title className="tooltip-text">Next.js</title>
     <mask
       id="mask0_408_139"
       style={{

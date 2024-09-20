@@ -17,6 +17,7 @@ const AmazonWebServices = (props: SVGProps<SVGSVGElement>) => (
     height="1em"
     {...props}
   >
+    <title className="tooltip-text">Amazon Web Services</title>
     <style>
       {"\n    .st1{fill-rule:evenodd;clip-rule:evenodd;fill:#f90}\n  "}
     </style>

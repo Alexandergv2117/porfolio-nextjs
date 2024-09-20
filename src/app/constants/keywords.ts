@@ -22,4 +22,4 @@ export const KEYWORDS = [
   "Nginx",
   "TypeScript",
   "JavaScript",
-]; 
+];

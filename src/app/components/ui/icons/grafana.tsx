@@ -9,6 +9,7 @@ const Grafana = (props: SVGProps<SVGSVGElement>) => (
     viewBox="0 0 256 279"
     {...props}
   >
+    <title className="tooltip-text">Grafana</title>
     <defs>
       <linearGradient
         id="a"

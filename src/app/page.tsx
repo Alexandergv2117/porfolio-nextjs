@@ -1,9 +1,10 @@
+import PrincipalTools from "./components/principal-tools/principal-tools";
 import Profile from "./components/profile/profile";
 
 export default function Home() {
   return (
-    <main className="w-full mt-36">
-      <div className="w-full space-y-6 sm:space-y-20">
+    <main className="w-full mt-28 sm:mt-36">
+      <section className="w-full space-y-6 sm:space-y-20">
         <Profile />
         <div className="w-full flex flex-col space-y-4">
           <h1 className="font-bold text-5xl sm:text-7xl gradient-text-random">
@@ -24,7 +25,8 @@ export default function Home() {
             colaborar en diversas áreas del desarrollo de software.
           </p>
         </div>
-      </div>
+        <PrincipalTools />
+      </section>
     </main>
   );
 }

@@ -18,7 +18,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Alexandergv2117",
-  description: "Personal website of Alexandergv2117",
+  description: "Porfolio de Alexander Garcia",
   keywords: KEYWORDS,
   authors: {
     name: "Alexander Garcia",
