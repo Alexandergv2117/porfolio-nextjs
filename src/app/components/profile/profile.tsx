@@ -36,7 +36,9 @@ export default function Profile() {
             </Link>
           </li>
           <li className="flex rounded-full p-2 bg-white bg-opacity-10 w-auto cursor-pointer hover:bg-opacity-20">
-            <Gmail className="w-[1rem] h-[1rem] sm:w-[1.5rem] sm:h-[1.5rem]" />
+            <a href="mailto:alexandergv2117@gmail.com" className="flex items-center">
+              <Gmail className="w-[1rem] h-[1rem] sm:w-[1.5rem] sm:h-[1.5rem]" />
+            </a>
           </li>
           <li>
             <Link
