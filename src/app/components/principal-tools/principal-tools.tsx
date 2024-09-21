@@ -16,16 +16,66 @@ export default function PrincipalTools() {
         Herramientas y tecnologías favoritas
       </h2>
       <div className="flex flex-wrap gap-6 py-10 justify-between sm:justify-start">
-        <Nodejs className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem]" />
-        <NestJS className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem]" />
-        <Nextjs className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem]" />
-        <React className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem]" />
-        <Docker className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem]" />
-        <Linux className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem]" />
-        <AmazonWebServices className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem]" />
-        <Ansible className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem]" />
-        <Terraform className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem]" />
-        <GhActions className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem]" />
+        <div className="flex flex-col justify-center items-center group">
+          <Nodejs className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem] transition-transform duration-300 group-hover:scale-125" />
+          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2">
+            Node.js
+          </span>
+        </div>
+        <div className="flex flex-col justify-center items-center group">
+          <NestJS className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem] transition-transform duration-300 group-hover:scale-125" />
+          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2">
+            NestJS
+          </span>
+        </div>
+        <div className="flex flex-col justify-center items-center group">
+          <Nextjs className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem] transition-transform duration-300 group-hover:scale-125" />
+          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2">
+            Next.js
+          </span>
+        </div>
+        <div className="flex flex-col justify-center items-center group">
+          <React className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem] transition-transform duration-300 group-hover:scale-125" />
+          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2">
+            React
+          </span>
+        </div>
+        <div className="flex flex-col justify-center items-center group">
+          <Docker className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem] transition-transform duration-300 group-hover:scale-125" />
+          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2">
+            Docker
+          </span>
+        </div>
+        <div className="flex flex-col justify-center items-center group">
+          <Linux className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem] transition-transform duration-300 group-hover:scale-125" />
+          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2">
+            Linux
+          </span>
+        </div>
+        <div className="flex flex-col justify-center items-center group">
+          <AmazonWebServices className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem] transition-transform duration-300 group-hover:scale-125" />
+          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2">
+            AWS
+          </span>
+        </div>
+        <div className="flex flex-col justify-center items-center group">
+          <Ansible className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem] transition-transform duration-300 group-hover:scale-125" />
+          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2">
+            Ansible
+          </span>
+        </div>
+        <div className="flex flex-col justify-center items-center group">
+          <Terraform className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem] transition-transform duration-300 group-hover:scale-125" />
+          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2">
+            Terraform
+          </span>
+        </div>
+        <div className="flex flex-col justify-center items-center group">
+          <GhActions className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem] transition-transform duration-300 group-hover:scale-125" />
+          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2">
+            GitHub Actions
+          </span>
+        </div>
       </div>
     </section>
   );

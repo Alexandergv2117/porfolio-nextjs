@@ -8,7 +8,7 @@ export default function WorkExperience() {
       <h2 className="text-4xl font-semibold text-sky-300">
         Experiencia laboral
       </h2>
-      <div className="flex flex-col gap-4 mt-6">
+      <div className="flex flex-col gap-6 mt-6">
         {WORKS.map((work, index) => (
           <Card key={index + work.title} className="gap-2">
             <h3 className="text-2xl font-semibold">{work.title}</h3>
