@@ -4,7 +4,7 @@ import DynamicIcon from "../dynamic-icon/dynamic-icon";
 
 export default function WorkExperience() {
   return (
-    <section>
+    <section id="experiencie">
       <h2 className="text-4xl font-semibold text-sky-300">
         Experiencia laboral
       </h2>
@@ -26,7 +26,7 @@ export default function WorkExperience() {
                 </p>
               ))}
             </section>
-            <footer className="flex flex-wrap gap-4 pb-3">
+            <footer className="flex flex-wrap gap-4">
               {work.stack.map((tech, index) => (
                 <DynamicIcon key={index + tech} label={tech} className="w-[3rem] h-[3rem] sm:w-[3rem] sm:h-[3rem] bg-white/5 p-2 rounded-lg" />
               ))}

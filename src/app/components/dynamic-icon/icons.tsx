@@ -1,5 +1,6 @@
 import Ansible from "../ui/icons/ansible";
 import AmazonWebServices from "../ui/icons/aws";
+import Cerbos from "../ui/icons/cerbos";
 import Docker from "../ui/icons/docker";
 import Firebase from "../ui/icons/firebase";
 import GhActions from "../ui/icons/ghActions";
@@ -42,6 +43,7 @@ export const COMPONENTS_ICONS = {
   Terraform: Terraform,
   TypeScript: TypeScript,
   Firebase: Firebase,
+  Cerbos: Cerbos,
 };
 
 export const ICONS_NAMES = {
@@ -66,6 +68,7 @@ export const ICONS_NAMES = {
   Terraform: "Terraform",
   TypeScript: "TypeScript",
   Firebase: "Firebase",
+  Cerbos: "Cerbos",
 };
 
 

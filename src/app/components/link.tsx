@@ -17,6 +17,7 @@ export default function MyLink({
     <Link 
       href={href} 
       aria-label={ariaLabel} 
+      passHref
       className={`text-center text-sm p-2 px-4 rounded-full hover:bg-white hover:bg-opacity-10 ${className}`}>
       {children}
     </Link>
