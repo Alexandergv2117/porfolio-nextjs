@@ -10,17 +10,19 @@ export default function WorkExperience() {
       </h2>
       <div className="flex flex-col gap-6 mt-6">
         {WORKS.map((work, index) => (
-          <Card key={index + work.title} className="gap-4">
-            <h3 className="text-3xl font-semibold text-amber-400">
-              {work.title}
-            </h3>
-            <div className="flex flex-col sm:flex-row gap-1 text-xl text-stone-400">
-              <p>{work.company}</p>
-              <p className="hidden sm:flex">|</p>
-              <p>{work.date}</p>
-            </div>
+          <Card key={index + work.title} className="gap-2">
+            <header className="space-y-2">
+              <h3 className="text-3xl font-semibold text-amber-400">
+                {work.title}
+              </h3>
+              <div className="flex flex-col sm:flex-row gap-1 text-xl text-stone-400">
+                <p>{work.company}</p>
+                <p className="hidden sm:flex">|</p>
+                <p>{work.date}</p>
+              </div>
+            </header>
             <section className="space-y-3 py-6">
-              {work.description.map((paragraph, index) => (
+              {work.description.map((paragraph: string, index) => (
                 <p key={index + paragraph} className="text-[#cdcdcd] text-lg">
                   {paragraph}
                 </p>
@@ -28,7 +30,11 @@ export default function WorkExperience() {
             </section>
             <footer className="flex flex-wrap gap-4">
               {work.stack.map((tech, index) => (
-                <DynamicIcon key={index + tech} label={tech} className="w-[3rem] h-[3rem] sm:w-[3rem] sm:h-[3rem] bg-white/5 p-2 rounded-lg" />
+                <DynamicIcon
+                  key={index + tech}
+                  label={tech}
+                  className="w-[3rem] h-[3rem] sm:w-[3rem] sm:h-[3rem] bg-white/5 p-2 rounded-lg"
+                />
               ))}
             </footer>
           </Card>

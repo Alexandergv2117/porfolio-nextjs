@@ -9,7 +9,6 @@ const Nodejs = (props: SVGProps<SVGSVGElement>) => (
     height="1em"
     {...props}
   >
-    <title className="tooltip-text">Node.js</title>
     <defs>
       <linearGradient
         id="a"

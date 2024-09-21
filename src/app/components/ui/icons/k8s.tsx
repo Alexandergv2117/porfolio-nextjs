@@ -10,7 +10,6 @@ const Kubernetes = (props: SVGProps<SVGSVGElement>) => (
     height="1em"
     {...props}
   >
-    <title className="tooltip-text">Kubernetes</title>
     <path
       style={{
         fill: "#326ce5",

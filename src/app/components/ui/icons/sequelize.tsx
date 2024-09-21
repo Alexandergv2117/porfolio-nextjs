@@ -8,7 +8,6 @@ const Sequelize = (props: SVGProps<SVGSVGElement>) => (
     height="1em"
     {...props}
   >
-    <title className="tooltip-text">Sequelize</title>
     <path
       d="M219 94.4V201l-90.6 53.5-.8.8V295l.8.8L256 222.2V73.7l-1.2-.3-36 20 .2 1"
       fill="#2F406A"

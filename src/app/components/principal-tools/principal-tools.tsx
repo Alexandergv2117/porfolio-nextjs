@@ -1,13 +1,5 @@
-import Ansible from "../ui/icons/ansible";
-import AmazonWebServices from "../ui/icons/aws";
-import Docker from "../ui/icons/docker";
-import GhActions from "../ui/icons/ghActions";
-import Linux from "../ui/icons/linux";
-import NestJS from "../ui/icons/nestjs";
-import Nextjs from "../ui/icons/nextJS";
-import Nodejs from "../ui/icons/nodeJS";
-import React from "../ui/icons/react";
-import Terraform from "../ui/icons/terraform";
+import DynamicIcon from "../dynamic-icon/dynamic-icon";
+import { ICONS_NAMES } from "../dynamic-icon/icons";
 
 export default function PrincipalTools() {
   return (
@@ -16,66 +8,46 @@ export default function PrincipalTools() {
         Herramientas y tecnologías favoritas
       </h2>
       <div className="flex flex-wrap gap-6 py-10 justify-between sm:justify-start">
-        <div className="flex flex-col justify-center items-center group">
-          <Nodejs className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem] transition-transform duration-300 group-hover:scale-125" />
-          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2">
-            Node.js
-          </span>
-        </div>
-        <div className="flex flex-col justify-center items-center group">
-          <NestJS className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem] transition-transform duration-300 group-hover:scale-125" />
-          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2">
-            NestJS
-          </span>
-        </div>
-        <div className="flex flex-col justify-center items-center group">
-          <Nextjs className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem] transition-transform duration-300 group-hover:scale-125" />
-          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2">
-            Next.js
-          </span>
-        </div>
-        <div className="flex flex-col justify-center items-center group">
-          <React className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem] transition-transform duration-300 group-hover:scale-125" />
-          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2">
-            React
-          </span>
-        </div>
-        <div className="flex flex-col justify-center items-center group">
-          <Docker className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem] transition-transform duration-300 group-hover:scale-125" />
-          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2">
-            Docker
-          </span>
-        </div>
-        <div className="flex flex-col justify-center items-center group">
-          <Linux className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem] transition-transform duration-300 group-hover:scale-125" />
-          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2">
-            Linux
-          </span>
-        </div>
-        <div className="flex flex-col justify-center items-center group">
-          <AmazonWebServices className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem] transition-transform duration-300 group-hover:scale-125" />
-          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2">
-            AWS
-          </span>
-        </div>
-        <div className="flex flex-col justify-center items-center group">
-          <Ansible className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem] transition-transform duration-300 group-hover:scale-125" />
-          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2">
-            Ansible
-          </span>
-        </div>
-        <div className="flex flex-col justify-center items-center group">
-          <Terraform className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem] transition-transform duration-300 group-hover:scale-125" />
-          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2">
-            Terraform
-          </span>
-        </div>
-        <div className="flex flex-col justify-center items-center group">
-          <GhActions className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem] transition-transform duration-300 group-hover:scale-125" />
-          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-2">
-            GitHub Actions
-          </span>
-        </div>
+        <DynamicIcon
+          label={ICONS_NAMES.NodeJS}
+          className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem]"
+        />
+        <DynamicIcon
+          label={ICONS_NAMES.NestJS}
+          className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem]"
+        />
+        <DynamicIcon
+          label={ICONS_NAMES.NextJS}
+          className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem]"
+        />
+        <DynamicIcon
+          label={ICONS_NAMES.React}
+          className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem]"
+        />
+        <DynamicIcon
+          label={ICONS_NAMES.Docker}
+          className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem]"
+        />
+        <DynamicIcon
+          label={ICONS_NAMES.Linux}
+          className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem]"
+        />
+        <DynamicIcon
+          label={ICONS_NAMES.AWS}
+          className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem]"
+        />
+        <DynamicIcon
+          label={ICONS_NAMES.Ansible}
+          className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem]"
+        />
+        <DynamicIcon
+          label={ICONS_NAMES.Terraform}
+          className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem]"
+        />
+        <DynamicIcon
+          label={ICONS_NAMES.GH_Actions}
+          className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem]"
+        />
       </div>
     </section>
   );

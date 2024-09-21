@@ -12,7 +12,6 @@ export default function Terraform(props: SVGProps<SVGSVGElement>) {
       height="1em"
       {...props}
     >
-      <title className="tooltip-text">Terraform</title>
       <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g
         id="SVGRepo_tracerCarrier"

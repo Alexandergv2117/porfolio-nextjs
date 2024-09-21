@@ -10,7 +10,6 @@ export default function Ansible(props: SVGProps<SVGSVGElement>) {
       height="1em"
       {...props}
     >
-      <title className="tooltip-text">Ansible</title>
       <circle cx="12" cy="12" r="10" fill="white" />
       <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g

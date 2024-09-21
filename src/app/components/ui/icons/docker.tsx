@@ -8,7 +8,6 @@ const Docker = (props: SVGProps<SVGSVGElement>) => (
     height="1em"
     {...props}
   >
-    <title className="tooltip-text">Docker</title>
     <path
       fillRule="evenodd"
       clipRule="evenodd"
