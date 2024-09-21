@@ -10,8 +10,8 @@ const Grafana = (props: SVGProps<SVGSVGElement>) => (
   >
     <defs>
       <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#FFF100" />
-        <stop offset="100%" stop-color="#F05A28" />
+        <stop offset="0%" stopColor="#FFF100" />
+        <stop offset="100%" stopColor="#F05A28" />
       </linearGradient>
     </defs>
     <path
