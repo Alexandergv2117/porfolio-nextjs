@@ -14,7 +14,7 @@ interface Project {
 
 export const PROJECTS: Project[] = [
   {
-    title: "Elecciones 2024 USA",
+    title: "Elecciones USA 2024",
     company: "The Epoch Times México",
     href: "https://elecciones2024usa.theepochtimes.com/",
     tags: ["landing-page", "work-project"],
