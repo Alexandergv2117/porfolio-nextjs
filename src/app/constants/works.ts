@@ -1,3 +1,5 @@
+import { ICONS_NAMES } from "../components/dynamic-icon/icons";
+
 export const WORKS = [
   {
     title: "Desarrollador Backend",
@@ -5,13 +7,14 @@ export const WORKS = [
     date: "Octubre 2023 - Actual",
     description: [],
     stack: [
-      "Nodejs",
-      "Nestjs",
-      "Docker",
-      "Terraform",
-      "Ansible",
-      "React",
-      "Nextjs",
+      ICONS_NAMES.NestJS,
+      ICONS_NAMES.Vue,
+      ICONS_NAMES.NextJS,
+      ICONS_NAMES.MongoDB,
+      ICONS_NAMES.Firebase,
+      ICONS_NAMES.Docker,
+      ICONS_NAMES.GH_Actions,
+      ICONS_NAMES.Ansible,
     ],
   },
   {
@@ -24,12 +27,12 @@ export const WORKS = [
       "Realice la actualización todas las dependencias del proyecto, tanto del backend como del frontend, migrando de Node.js 12 a Node.js 18 en la API y de Node.js 14 a Node.js 18 en el frontend, lo que optimizó significativamente el rendimiento de la API.",
     ],
     stack: [
-      "React",
-      "Nodejs",
-      "Serverless",
-      "PostgreSQL",
-      "AWS",
-      "Docker",
+      ICONS_NAMES.React,
+      ICONS_NAMES.NodeJS,
+      ICONS_NAMES.Sequelize,
+      ICONS_NAMES.PostgreSQL,
+      ICONS_NAMES.Docker,
+      ICONS_NAMES.AWS,
     ],
   },
 ];

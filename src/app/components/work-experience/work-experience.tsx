@@ -1,6 +1,6 @@
 import Card from "../ui/card";
 import { WORKS } from "@/app/constants/works";
-import Tag from "../ui/tags";
+import DynamicIcon from "../dynamic-icon/dynamic-icon";
 
 export default function WorkExperience() {
   return (
@@ -26,9 +26,9 @@ export default function WorkExperience() {
                 </p>
               ))}
             </section>
-            <footer className="flex flex-wrap gap-2">
+            <footer className="flex flex-wrap gap-4 pb-3">
               {work.stack.map((tech, index) => (
-                <Tag key={index + tech}>{tech}</Tag>
+                <DynamicIcon key={index + tech} label={tech} className="w-[3rem] h-[3rem] sm:w-[3rem] sm:h-[3rem] bg-white/5 p-2 rounded-lg" />
               ))}
             </footer>
           </Card>
