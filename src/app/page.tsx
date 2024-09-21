@@ -13,15 +13,15 @@ export default function Home() {
           </h1>
           <p className="text-balance text-[#cdcdcd] font-light sm:text-lg description-experience">
             Desarrollador de software con +2 años de experiencia,
-            especializado en backend utilizando <span>Nodejs</span> y{" "}
-            <span>Nestjs</span>. Gestión de infraestructura en <span>AWS</span>{" "}
+            especializado en backend utilizando <span>Node.js</span> y{" "}
+            <span>NestJS</span>. Gestión de infraestructura en <span>AWS</span>{" "}
             utilizando <span>Terraform</span>, configuración de
             servidores con <span>Ansible</span>. Aplicaciones desplegadas de
-            manera eficiente utilizando <span>Caddy server</span> y{" "}
+            manera eficiente utilizando <span>Caddy</span> y{" "}
             <span>Docker Swarm</span>, utilizando pipelines para el{" "}
             <span>CI/CD</span> con <span>GitHub Actions</span>. Aunque mi enfoque
             principal es el backend, también tengo experiencia en frontend con{" "}
-            <span>React</span> y <span>Nextjs</span>, lo que me permite
+            <span>React</span> y <span>Next.js</span>, lo que me permite
             colaborar en diversas áreas del desarrollo de software.
           </p>
         </div>

@@ -12,6 +12,7 @@ export default function NavBar() {
       <MyLink href="/" >
         Proyectos
       </MyLink>
+      {/* <SwitchMode /> */}
     </nav>
   );
 }
