@@ -17,6 +17,7 @@ import Nodejs from "../ui/icons/nodeJS";
 import PostgreSQL from "../ui/icons/postgreSQL";
 import React from "../ui/icons/react";
 import Sequelize from "../ui/icons/sequelize";
+import TailwindCSS from "../ui/icons/tailwindCSS";
 import Terraform from "../ui/icons/terraform";
 import TypeScript from "../ui/icons/TypeScript";
 import Vue from "../ui/icons/vue";
@@ -44,6 +45,7 @@ export const COMPONENTS_ICONS = {
   TypeScript: TypeScript,
   Firebase: Firebase,
   Cerbos: Cerbos,
+  TailwindCSS: TailwindCSS,
 };
 
 export const ICONS_NAMES = {
@@ -69,6 +71,7 @@ export const ICONS_NAMES = {
   TypeScript: "TypeScript",
   Firebase: "Firebase",
   Cerbos: "Cerbos",
+  TailwindCSS: "TailwindCSS",
 };
 
 
