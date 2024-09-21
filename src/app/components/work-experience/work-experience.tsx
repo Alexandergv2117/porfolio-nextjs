@@ -10,21 +10,27 @@ export default function WorkExperience() {
       </h2>
       <div className="flex flex-col gap-6 mt-6">
         {WORKS.map((work, index) => (
-          <Card key={index + work.title} className="gap-2">
-            <h3 className="text-2xl font-semibold">{work.title}</h3>
-            <div className="flex gap-1">
-              <p className="text-gray-400">{work.company}</p>
-              <p className="text-gray-400">|</p>
-              <p className="text-gray-400">{work.date}</p>
+          <Card key={index + work.title} className="gap-4">
+            <h3 className="text-3xl font-semibold text-amber-400">
+              {work.title}
+            </h3>
+            <div className="flex flex-col sm:flex-row gap-1 text-xl text-stone-400">
+              <p>{work.company}</p>
+              <p className="hidden sm:flex">|</p>
+              <p>{work.date}</p>
             </div>
-            <p className="text-gray-400">{work.description}</p>
-            <div className="flex flex-wrap gap-2">
-              {work.stack.map((tech, index) => (
-                <Tag key={index + tech}>
-                  {tech}
-                </Tag>
+            <section className="space-y-3 py-6">
+              {work.description.map((paragraph, index) => (
+                <p key={index + paragraph} className="text-[#cdcdcd] text-lg">
+                  {paragraph}
+                </p>
               ))}
-            </div>
+            </section>
+            <footer className="flex flex-wrap gap-2">
+              {work.stack.map((tech, index) => (
+                <Tag key={index + tech}>{tech}</Tag>
+              ))}
+            </footer>
           </Card>
         ))}
       </div>
