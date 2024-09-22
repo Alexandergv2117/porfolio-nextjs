@@ -19,7 +19,7 @@ export const PROJECTS: Project[] = [
     href: "https://elecciones2024usa.theepochtimes.com/",
     tags: ["landing-page", "work-project"],
     description: [
-      "Desarrolle una landing page para la cubertura especial de las elecciiones presidenciales de Estados Unidos de 2024 para The Epoch Times México.",
+      "Desarrollo de landing page para la cubertura especial de las elecciones presidenciales de Estados Unidos de 2024 para The Epoch Times México.",
       "La página fue desarrollada con Next.js y TailwindCSS, consumiendo datos de una API de WordPress. Aplicando la estrategia de SSG para mejorar el rendimiento de la página.",
     ],
     image: "/elecciones2024USA.webp",

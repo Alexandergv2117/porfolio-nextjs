@@ -7,9 +7,9 @@ export const WORKS = [
     date: "Octubre 2023 - Actual",
     description: [
       "Lideré el análisis y la migración de un sistema CRM desde una arquitectura monolítica hacia una arquitectura de microservicios, logrando una mejora significativa en rendimiento y escalabilidad. Implementé un sistema de autenticación con Firebase y autorización con Cerbos, utilizando el modelo ABAC (Attribute-Based Access Control), lo que permitió una gestión granular de permisos a nivel de usuario y la creación flexible de roles.",
-      "Se utilizo Ansible para la configuración de los servidores de producción y desarrollo, se uso Docker para estandarizar los entornos de desarrollo del equipo. Implementación de Caddy como API Gateway, aplicando las reglas de proxy inverso necesarias para la comunicación entre los microservicios.",
-      "Implemente pipelines de CI/CD con GitHub Actions, para realizar los despliegues en el entorno de producción y desarrollo, utilizando Docker Swarm para la orquestación de contenedores, de igual manera, implemente el plugin de Caddy para la configuración de las reglas del proxy inverso de manera dinámica en los archivos de deployment de cada servicio.",
-      "Configure el sistema para la visualización de logs utilzando loki y grafana, lo que permitió la visualización de los logs de los microservicios y los logs de Caddy, lo que facilitó la toma de decisiones en caso de errores o problemas en la comunicación entre los servicios.",
+      "Se utilizó Ansible para la configuración de los servidores, utilización de Docker para mantener el entorno de desarrollo más estable. Implementación de Caddy como API Gateway, aplicando las reglas de reverse proxy, para cominucar los microservicios.",
+      "Implemente pipelines de CI/CD con GitHub Actions, para realizar los despliegues, utilizando Docker Swarm para la orquestación de contenedores, implementación del plugin de Caddy para la configuración de las reglas del proxy inverso de manera dinámica en los archivos de deployment de cada servicio.",
+      "Configuración del sistema para la visualización de logs utilzando loki y grafana.",
     ],
     stack: [
       ICONS_NAMES.NestJS,

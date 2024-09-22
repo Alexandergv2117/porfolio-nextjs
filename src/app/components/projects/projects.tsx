@@ -39,11 +39,11 @@ export default function Projects() {
                 />
               )}
               {project.description && (
-                <div>
+                <div className="space-y-4 py-4">
                   {project.description.map((paragraph, index) => (
                     <p
                       key={index + paragraph}
-                      className="text-[#cdcdcd] text-lg"
+                      className="text-[#cdcdcd] sm:text-lg font-light"
                     >
                       {paragraph}
                     </p>
