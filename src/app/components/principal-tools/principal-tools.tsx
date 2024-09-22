@@ -28,6 +28,10 @@ export default function PrincipalTools() {
           label={ICONS_NAMES.Docker}
           className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem]"
         />
+        {/* <DynamicIcon
+          label={ICONS_NAMES.Kubernetes}
+          className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem]"
+        /> */}
         <DynamicIcon
           label={ICONS_NAMES.Linux}
           className="w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem]"
