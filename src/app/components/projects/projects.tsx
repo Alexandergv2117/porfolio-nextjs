@@ -1,6 +1,7 @@
 import { PROJECTS } from "@/app/constants/projects";
 import Card from "../ui/card";
 import DynamicIcon from "../dynamic-icon/dynamic-icon";
+import Tag from "../ui/tags";
 
 export default function Projects() {
   return (
@@ -9,11 +10,11 @@ export default function Projects() {
       <div className="space-y-4">
         {PROJECTS.map((project, index) => (
           <Card key={index} className="gap-2">
-            <header>
+            <header className="space-y-2">
               <h3 className="text-2xl font-semibold text-amber-400">
                 {project.title}
               </h3>
-              <span className="flex flex-col sm:flex-row sm:space-x-4">
+              <span className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 sm:items-center">
                 {project.company && (
                   <span className="text-stone-400">{project.company}</span>
                 )}
@@ -28,6 +29,13 @@ export default function Projects() {
                   </a>
                 )}
               </span>
+              {project.tags && (
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag, index) => (
+                    <Tag key={index} label={tag} />
+                  ))}
+                </div>
+              )}
             </header>
             <section className="space-y-3 py-6">
               {project.image && (
