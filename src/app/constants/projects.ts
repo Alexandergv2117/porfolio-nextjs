@@ -19,10 +19,15 @@ export const PROJECTS: Project[] = [
     href: "https://elecciones2024usa.theepochtimes.com/",
     tags: ["landing page", "work project"],
     description: [
-      "Desarrollo de landing page para la cubertura especial de las elecciones presidenciales de Estados Unidos de 2024 para The Epoch Times México.",
-      "La página fue desarrollada con Next.js y TailwindCSS, consumiendo datos de una API de WordPress. Aplicando la estrategia de SSG para mejorar el rendimiento de la página.",
+      "Desarrollo de Landing Page para la Cobertura Especial de las Elecciones Presidenciales de USA 2024 - The Epoch Times México.",
+      "Codifiqué una landing page para la cobertura especial de las elecciones presidenciales de USA 2024, destinada a The Epoch Times México. Utilicé Next.js y TailwindCSS, implementando Static Site Generation (SSG) para optimizar el rendimiento y consumiendo datos de una API de WordPress. También configuré GitHub Actions para el despliegue automático, realizado con Docker Swarm y Caddy.",
     ],
     image: "/elecciones2024USA.webp",
-    stack: [ICONS_NAMES.NextJS, ICONS_NAMES.TailwindCSS],
+    stack: [
+      ICONS_NAMES.NextJS,
+      ICONS_NAMES.TailwindCSS,
+      ICONS_NAMES.GH_Actions,
+      ICONS_NAMES.Docker,
+    ],
   },
 ];
