@@ -1,7 +1,6 @@
 import { PROJECTS } from "@/app/constants/projects";
 import Card from "../ui/card";
 import DynamicIcon from "../dynamic-icon/dynamic-icon";
-import Tag from "../ui/tags";
 import OpenLink from "../ui/icons/openLink";
 
 export default function Projects() {
