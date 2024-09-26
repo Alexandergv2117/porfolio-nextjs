@@ -13,7 +13,7 @@ export default function Home() {
             Desarrollador de Software
           </h1>
           <p className="text-balance text-[#cdcdcd] font-light sm:text-lg description-experience">
-            Desarrollador de software con +2 años de experiencia,
+            Desarrollador de software con más de dos años de experiencia,
             especializado en backend utilizando <span>Node.js</span> y{" "}
             <span>NestJS</span>. Gestión de infraestructura en <span>AWS</span>{" "}
             utilizando <span>Terraform</span>, configuración de
