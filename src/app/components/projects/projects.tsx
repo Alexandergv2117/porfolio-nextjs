@@ -2,6 +2,7 @@ import { PROJECTS } from "@/app/constants/projects";
 import Card from "../ui/card";
 import DynamicIcon from "../dynamic-icon/dynamic-icon";
 import Tag from "../ui/tags";
+import OpenLink from "../ui/icons/openLink";
 
 export default function Projects() {
   return (
@@ -9,7 +10,7 @@ export default function Projects() {
       <h2 className="text-4xl font-semibold text-sky-300">Proyectos</h2>
       <div className="space-y-4">
         {PROJECTS.map((project, index) => (
-          <Card key={index} className="gap-2">
+          <Card key={index} className="gap-2 sm:p-8">
             <header className="space-y-2">
               <h3 className="text-2xl font-semibold text-amber-400">
                 {project.title}
@@ -23,19 +24,13 @@ export default function Projects() {
                     href={project.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-stone-400 hover:text-amber-400"
+                    className="text-stone-400 hover:text-amber-400 flex flex-row items-center gap-2"
                   >
-                    Ver proyecto
+                    <span>Ver proyecto</span>
+                    <OpenLink size={16} />
                   </a>
                 )}
               </span>
-              {project.tags && (
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag, index) => (
-                    <Tag key={index} label={tag} />
-                  ))}
-                </div>
-              )}
             </header>
             <section className="space-y-3 py-6">
               {project.image && (
