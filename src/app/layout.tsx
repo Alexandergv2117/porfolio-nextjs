@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased sm:max-w-[60rem] relative flex flex-col justify-center items-center mx-auto px-2 pb-2`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased sm:max-w-[60rem] relative flex flex-col justify-center items-center mx-auto px-4 sm:px-2 pb-2`}
       >
         <NavBar />
         {children}

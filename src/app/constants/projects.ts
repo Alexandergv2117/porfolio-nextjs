@@ -24,6 +24,7 @@ export const PROJECTS: Project[] = [
     ],
     image: "/elecciones2024USA.webp",
     stack: [
+      ICONS_NAMES.TypeScript,
       ICONS_NAMES.NextJS,
       ICONS_NAMES.TailwindCSS,
       ICONS_NAMES.GH_Actions,

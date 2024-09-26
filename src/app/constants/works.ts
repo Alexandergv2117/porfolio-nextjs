@@ -12,6 +12,7 @@ export const WORKS = [
       "Configuración del sistema para la visualización de logs utilzando loki y grafana.",
     ],
     stack: [
+      ICONS_NAMES.TypeScript,
       ICONS_NAMES.NestJS,
       ICONS_NAMES.Vue,
       ICONS_NAMES.MongoDB,
@@ -33,6 +34,7 @@ export const WORKS = [
       "Realice la actualización todas las dependencias del proyecto, tanto del backend como del frontend, migrando de Node.js 12 a Node.js 18 en la API y de Node.js 14 a Node.js 18 en el frontend, lo que optimizó significativamente el rendimiento de la API.",
     ],
     stack: [
+      ICONS_NAMES.TypeScript,
       ICONS_NAMES.React,
       ICONS_NAMES.NodeJS,
       ICONS_NAMES.Sequelize,
