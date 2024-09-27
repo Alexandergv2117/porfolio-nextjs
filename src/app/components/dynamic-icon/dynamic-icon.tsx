@@ -14,7 +14,7 @@ export default function DynamicIcon({
   }
 
   return (
-    <div className="flex flex-col group gap-2 relative">
+    <div className="flex flex-col group gap-2 relative justify-center items-center">
       <Icon
         className={`flex justify-center items-center transition-transform duration-300 group-hover:scale-125 ${className}`}
       />
