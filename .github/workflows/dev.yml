@@ -53,6 +53,9 @@ jobs:
       - name: Copy deployment file to server
         run: scp -o StrictHostKeyChecking=no -P ${{ secrets.HOST_SSH_PORT}} /tmp/devopsify.deployment.yml ${{ secrets.HOST_SSH_USER }}@${{ secrets.HOST_SSH_NAME }}:/tmp/${{ github.event.repository.name }}.${{ env.ENVIRONMENT }}.deployment.yml
 
+      - name: Docker login on server
+        run: ssh -o StrictHostKeyChecking=no -p ${{ secrets.HOST_SSH_PORT }} deploy@${{ secrets.HOST_SSH_NAME }} "docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}"
+
       - name: Pull image on server
         run: |
           SHORT_SHA=$(git rev-parse --short=7 HEAD)
