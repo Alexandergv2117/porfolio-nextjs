@@ -14,6 +14,9 @@ services:
         caddy.tls: "TLS_PLACEHOLDER"
         caddy.tls.on_demand:
         caddy.reverse_proxy: "{{upstreams 3000}}"
+        caddy.log.output: file /var/log/caddy/HOST_PLACEHOLDER.log
+        caddy.log.format: "json"
+        caddy.log.level: "INFO"
 
 networks:
   caddy:
