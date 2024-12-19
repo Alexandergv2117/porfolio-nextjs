@@ -9,9 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "classnames": "2.5.1",
+    "date-fns": "4.1.0",
+    "gray-matter": "4.0.3",
+    "lucide-react": "0.468.0",
     "next": "14.2.11",
     "react": "18",
-    "react-dom": "18"
+    "react-dom": "18",
+    "remark": "15.0.1",
+    "remark-html": "16.0.1"
   },
   "devDependencies": {
     "@next/third-parties": "15.0.3",
