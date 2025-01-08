@@ -2,18 +2,18 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
-import NavBar from "./components/nav-bar";
-import "./globals.css";
-import { KEYWORDS } from "./constants/keywords";
-import Footer from "./components/footer";
+import NavBar from "../components/nav-bar";
+import "../globals.css";
+import { KEYWORDS } from "../constants/keywords";
+import Footer from "../components/footer";
 
 const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
+  src: "../fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
 const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
+  src: "../fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
 });
@@ -36,9 +36,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased sm:max-w-[60rem] relative flex flex-col justify-center items-center mx-auto px-4 sm:px-2 pb-2`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased sm:max-w-[70rem] relative flex flex-col justify-center items-center mx-auto px-4 sm:px-2 pb-2`}
       >
-        <NavBar />
         {children}
         <Footer />
       </body>

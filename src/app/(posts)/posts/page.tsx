@@ -3,8 +3,8 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { CalendarIcon, UserIcon } from "lucide-react";
-import Card from "../components/ui/card";
-import DateFormatter from "../components/date-formatter";
+import Card from "../../components/ui/card";
+import DateFormatter from "../../components/date-formatter";
 
 export const metadata: Metadata = {
   title: "Posts",
@@ -15,7 +15,6 @@ export default function PostsPage() {
 
   return (
     <main className="w-full mt-28 sm:mt-32 gap-10 font-sans">
-      <h1>Blogs</h1>
       <section className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-2">
         {posts.map((post) => (
           <Card
@@ -29,7 +28,7 @@ export default function PostsPage() {
               height={400}
               className="w-full h-48 object-cover"
             />
-            <div className="p-4">
+            <div className="p-4 flex flex-col justify-between h-full">
               <h2 className="text-xl font-bold mb-2">
                 <Link
                   href={`/posts/${post.slug}`}

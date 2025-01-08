@@ -27,8 +27,6 @@ Docker es una plataforma de contenedores que permite desarrollar, implementar y 
 A continuación se muestra un ejemplo básico de un archivo `docker-compose.yml` para una aplicación web con una base de datos PostgreSQL:
 
 ```yaml
-version: '3.8'
-
 services:
   web:
     image: node:14

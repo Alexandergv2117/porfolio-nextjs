@@ -16,3 +16,7 @@
 .markdown h3 {
   @apply text-2xl mt-8 mb-4 leading-snug;
 }
+
+.markdown pre {
+  @apply p-2 my-10 border-y-2 border-gray-200;
+}
