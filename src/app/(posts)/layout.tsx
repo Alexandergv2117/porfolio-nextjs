@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
-import NavBar from "../components/nav-bar";
 import "../globals.css";
 import { KEYWORDS } from "../constants/keywords";
 import Footer from "../components/footer";

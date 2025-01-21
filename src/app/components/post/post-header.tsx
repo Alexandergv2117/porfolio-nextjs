@@ -1,4 +1,3 @@
-import Avatar from "./avatar";
 import CoverImage from "./cover-image";
 import DateFormatter from "../date-formatter";
 import { PostTitle } from "./post-title";
@@ -11,7 +10,7 @@ type Props = {
   author: Author;
 };
 
-export function PostHeader({ title, coverImage, date, author }: Props) {
+export function PostHeader({ title, coverImage, date }: Props) {
   return (
     <>
       <PostTitle>{title}</PostTitle>
