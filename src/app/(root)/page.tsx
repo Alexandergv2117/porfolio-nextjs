@@ -13,19 +13,19 @@ export default function Home() {
           <h1 className="font-bold text-5xl sm:text-7xl gradient-text-random">
             Ingeniero de Software
           </h1>
-          <div className="text-2xl flex items-center space-x-4">
+          {/* <div className="text-2xl flex items-center space-x-4">
             <span className="font-bold text-[#38bdf8]">
               Backend
             </span>
             <span className="text-gray-400">|</span>
-            {/* <span className="font-bold text-[#1761b1]">
+            <span className="font-bold text-[#1761b1]">
               Frontend
-            </span> */}
+            </span>
             <span className="text-gray-400">|</span>
             <span className="font-bold text-[#facc15]">
               DevOps
             </span>
-          </div>
+          </div> */}
 
           <p className="text-balance text-[#cdcdcd] font-light sm:text-lg description-experience">
             Desarrollador de software con más de dos años de experiencia,
