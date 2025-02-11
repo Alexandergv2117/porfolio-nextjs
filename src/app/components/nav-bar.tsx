@@ -9,9 +9,9 @@ export default function NavBar() {
       <MyLink href="#experiencie" >
         Experiencia Laboral
       </MyLink>
-      <MyLink href="#projects" >
+      {/* <MyLink href="#projects" >
         Proyectos
-      </MyLink>
+      </MyLink> */}
       {/* <SwitchMode /> */}
     </nav>
   );

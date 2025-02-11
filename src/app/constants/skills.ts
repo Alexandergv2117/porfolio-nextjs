@@ -2,16 +2,7 @@ import { ICONS_NAMES } from "../components/dynamic-icon/icons";
 
 export const SKILLS = [
   {
-    name: 'Frontend',
-    stack: [
-      ICONS_NAMES.TypeScript,
-      ICONS_NAMES.React,
-      ICONS_NAMES.NextJS,
-      ICONS_NAMES.TailwindCSS,
-    ]
-  },
-  {
-    name: 'Backend',
+    name: "Backend",
     stack: [
       ICONS_NAMES.TypeScript,
       ICONS_NAMES.NodeJS,
@@ -21,16 +12,24 @@ export const SKILLS = [
       ICONS_NAMES.MongoDB,
       ICONS_NAMES.Cerbos,
       ICONS_NAMES.Docker,
-    ]
+    ],
   },
   {
-    name: 'DevOps',
+    name: "DevOps",
     stack: [
       ICONS_NAMES.GH_Actions,
       ICONS_NAMES.Docker,
       ICONS_NAMES.Ansible,
       ICONS_NAMES.Terraform,
       ICONS_NAMES.AWS,
-    ]
-  }
+    ],
+  },
+  {
+    name: "Frontend",
+    stack: [
+      ICONS_NAMES.React,
+      ICONS_NAMES.NextJS,
+      ICONS_NAMES.TailwindCSS,
+    ],
+  },
 ];

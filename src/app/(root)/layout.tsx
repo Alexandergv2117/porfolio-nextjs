@@ -6,6 +6,7 @@ import NavBar from "../components/nav-bar";
 import "../globals.css";
 import { KEYWORDS } from "../constants/keywords";
 import Footer from "../components/footer";
+import { NODE_ENV } from "../constants/env";
 
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
@@ -42,7 +43,7 @@ export default function RootLayout({
         {children}
         <Footer />
       </body>
-      <GoogleAnalytics gaId="G-VNQRKJDSSE" />
+      {NODE_ENV === "production" && <GoogleAnalytics gaId="G-VNQRKJDSSE" />}
     </html>
   );
 }

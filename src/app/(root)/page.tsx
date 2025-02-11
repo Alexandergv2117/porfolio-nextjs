@@ -1,6 +1,6 @@
 import PrincipalTools from "../components/principal-tools/principal-tools";
 import Profile from "../components/profile/profile";
-import Projects from "../components/projects/projects";
+// import Projects from "../components/projects/projects";
 import Skills from "../components/skills/skills";
 import WorkExperience from "../components/work-experience/work-experience";
 
@@ -44,7 +44,7 @@ export default function Home() {
         <PrincipalTools />
       </section>
       <WorkExperience />
-      <Projects />
+      {/* <Projects /> */}
       <Skills />
     </main>
   );
