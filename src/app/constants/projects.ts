@@ -22,7 +22,7 @@ export const PROJECTS: Project[] = [
       "Desarrolle la página web del periódico the epoch times méxico, migrandola de WordPress a Next.js, usando  TailwindCSS para los estilo. Se implementó Server Side Rendering (SSR) para mejorar el SEO y la velocidad de carga.",
       "Configuracion del servidor con Docker Swarm y Caddy, para el despliegue de la aplicación, y configuración de GitHub Actions para el CI/CD.",
     ],
-    image: "/el_epoch.webp",
+    image: "/elepoch.png",
     stack: [
       ICONS_NAMES.TypeScript,
       ICONS_NAMES.NextJS,
