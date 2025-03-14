@@ -1,5 +1,3 @@
-version: "3.7"
-
 services:
   STACK_PLACEHOLDER-app:
     image: IMAGE_PLACEHOLDER
@@ -11,8 +9,7 @@ services:
       replicas: 1
       labels:
         caddy: HOST_PLACEHOLDER
-        caddy.tls: "TLS_PLACEHOLDER"
-        caddy.tls.on_demand:
+        caddy.tls: "/tmp/certs/cert.pem /tmp/certskey.pem"
         caddy.reverse_proxy: "{{upstreams 3000}}"
         caddy.log.output: file /var/log/caddy/HOST_PLACEHOLDER.log
         caddy.log.format: "json"

@@ -65,9 +65,9 @@ jobs:
       - name: Deploy to Docker swarm
         run: ssh -o StrictHostKeyChecking=no -p ${{ secrets.HOST_SSH_PORT }} deploy@${{ secrets.HOST_SSH_NAME }} "docker stack deploy -c /tmp/${{ github.event.repository.name }}.${{ env.ENVIRONMENT }}.deployment.yml ${{ github.event.repository.name }}-${{ env.ENVIRONMENT }}"
 
-      - name: Clean up deployment file on server
-        if: always()
-        run: ssh -o StrictHostKeyChecking=no -p ${{ secrets.HOST_SSH_PORT }} deploy@${{ secrets.HOST_SSH_NAME }} "rm -f /tmp/${{ github.event.repository.name }}.${{ env.ENVIRONMENT }}.deployment.yml"
+      # - name: Clean up deployment file on server
+      #   if: always()
+      #   run: ssh -o StrictHostKeyChecking=no -p ${{ secrets.HOST_SSH_PORT }} deploy@${{ secrets.HOST_SSH_NAME }} "rm -f /tmp/${{ github.event.repository.name }}.${{ env.ENVIRONMENT }}.deployment.yml"
 
       - name: Delete deployment file locally
         if: always()
