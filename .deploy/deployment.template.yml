@@ -7,16 +7,6 @@ services:
       - caddy
     deploy:
       replicas: 2
-      update_config:
-        order: start-first
-        failure_action: rollback
-        delay: 5s
-        parallelism: 1
-        monitor: 30s
-      restart_policy:
-        condition: on-failure
-        max_attempts: 3
-        window: 120s
       labels:
         caddy: HOST_PLACEHOLDER
         caddy.tls: "/tmp/certs/cert.pem /tmp/certskey.pem"
