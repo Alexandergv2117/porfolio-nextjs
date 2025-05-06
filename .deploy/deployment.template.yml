@@ -5,8 +5,17 @@ services:
       - PORT=3000
     networks:
       - caddy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 20s
+      timeout: 10s
+      retries: 10
     deploy:
       replicas: 1
+      update_config:
+        order: start-first
+        failure_action: rollback
+        delay: 5s
       labels:
         caddy: HOST_PLACEHOLDER
         caddy.tls: "/tmp/certs/cert.pem /tmp/certskey.pem"
