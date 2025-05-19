@@ -6,7 +6,7 @@ services:
     networks:
       - caddy
     deploy:
-      replicas: 2
+      replicas: 1
       labels:
         caddy: HOST_PLACEHOLDER
         caddy.tls: "TLS_PLACEHOLDER"
