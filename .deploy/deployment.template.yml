@@ -6,7 +6,26 @@ services:
     networks:
       - caddy
     deploy:
-      replicas: 1
+      replicas: 3
+      update_config:
+        parallelism: 1
+        delay: 30s
+        failure_action: rollback
+        monitor: 60s
+        max_failure_ratio: 0.3
+        order: start-first
+      rollback_config:
+        parallelism: 1
+        delay: 0s
+        failure_action: pause
+        monitor: 60s
+        max_failure_ratio: 0.3
+        order: stop-first
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 120s
       labels:
         caddy: HOST_PLACEHOLDER
         caddy.tls: "/etc/certs/cert.pem /etc/certs/key.pem"
