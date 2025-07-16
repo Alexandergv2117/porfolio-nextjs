@@ -8,7 +8,7 @@ export const WORKS = [
       description: [
          'Desarrollo aplicaciones y páginas web con Next.js, seleccionando esta tecnología según las necesidades del proyecto para garantizar soluciones escalables y de alto rendimiento, pero identifiqué una oportunidad de mejora en la gestión de infraestructura, que carecía de estandarización y generaba costos operativos elevados.',
          'Propuse y lideré la consolidación de múltiples servicios de hosting dispersos en un único VPS, logrando una reducción de costos operativos de aproximadamente un 50%, optimizando la administración con configuraciones mínimas y automatizadas.',
-         'Diseñé e implementé una arquitectura basada en Docker Swarm y Caddy Server para hospedar proyectos y páginas desarrolladas en Next.js, eliminando la necesidad de compilaciones locales y configuraciones manuales de servidores web.',
+         'Diseñé e implementé una arquitectura basada en Docker Swarm y Caddy Server para hospedar proyectos, eliminando la necesidad de compilaciones locales y configuraciones manuales de servidores web.',
          'Configuración de escalado automático de servicios en Docker Swarm, garantizando un rendimiento estable bajo alta carga de usuarios, y utilicé un plugin de Caddy para automatizar la configuración de reglas de proxy inverso.',
          'Automaticé la configuración del servidor VPS mediante Ansible, asegurando una recuperación rápida y consistente en caso de fallos, mejorando la resiliencia y mantenibilidad de la infraestructura.',
       ],
