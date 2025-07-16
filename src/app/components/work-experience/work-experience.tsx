@@ -21,7 +21,7 @@ export default function WorkExperience() {
                 <p>{work.date}</p>
               </div>
             </header>
-            <section className="space-y-3 py-6 sm:text-lg font-light">
+            <section className="space-y-3 py-6 sm:text-lg font-normal">
               {work.description.map((paragraph: string, index) => (
                 <p key={index + paragraph} className="text-[#cdcdcd]">
                   {paragraph}
