@@ -1,0 +1,18 @@
+{
+  "navbar": {
+    "home": "Home",
+    "workExperience": "Work Experience"
+  },
+  "profile": {
+    "position": "Software Engineer"
+  },
+  "tools-technologies": {
+    "name": "Favorite tools and technologies"
+  },
+  "projects": {
+    "name": "Projects"
+  },
+  "skills": {
+    "name": "Skills"
+  }
+}

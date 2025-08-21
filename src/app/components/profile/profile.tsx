@@ -9,22 +9,22 @@ export default function Profile() {
   return (
     <section className="flex gap-4 sm:gap-10">
       <Image
-        src="https://avatars.githubusercontent.com/u/74172014?s=400&u=adc6d341b38a9d429a6427a1f6f7a355b3674ec6&v=4"
+        src="/profile-github.jpg"
         alt="Profile picture of Alexander Garcia"
         width={80}
         height={80}
         className="rounded-full sm:hidden"
       />
       <Image
-        src="https://avatars.githubusercontent.com/u/74172014?s=400&u=adc6d341b38a9d429a6427a1f6f7a355b3674ec6&v=4"
+        src="/profile-github.jpg"
         alt="Profile picture of Alexander Garcia"
-        width={100}
-        height={100}
+        width={130}
+        height={130}
         className="rounded-full hidden sm:block"
       />
       <div className="flex flex-col justify-center items-start space-y-4">
-        <span className="font-bold text-2xl sm:text-3xl">Alexander Garcia</span>
-        <ul className="flex flex-row space-x-4">
+        <span className="font-bold text-2xl sm:text-4xl">Alexander Garcia</span>
+        <ul className="flex flex-row gap-6">
           <li>
             <Link
               aria-label="Link to Github profile"

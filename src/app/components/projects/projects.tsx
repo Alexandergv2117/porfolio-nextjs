@@ -2,11 +2,13 @@ import { PROJECTS } from "@/app/constants/projects";
 import Card from "../ui/card";
 import DynamicIcon from "../dynamic-icon/dynamic-icon";
 import OpenLink from "../ui/icons/openLink";
+import { useTranslations } from "next-intl";
 
 export default function Projects() {
+  const t = useTranslations('projects');
   return (
     <section className="mt-10 space-y-10" id="projects">
-      <h2 className="text-4xl font-semibold text-sky-300">Proyectos</h2>
+      <h2 className="text-4xl font-semibold text-sky-300">{t('name')}</h2>
       <div className="space-y-4">
         {PROJECTS.map((project, index) => (
           <Card key={index} className="gap-2 sm:p-8">

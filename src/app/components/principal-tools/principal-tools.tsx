@@ -1,11 +1,13 @@
+import { useTranslations } from "next-intl";
 import DynamicIcon from "../dynamic-icon/dynamic-icon";
 import { ICONS_NAMES } from "../dynamic-icon/icons";
 
 export default function PrincipalTools() {
+  const t = useTranslations('tools-technologies');
   return (
     <section className="pt-10 sm:pt-0">
       <h2 className="text-4xl font-semibold text-sky-300">
-        Herramientas y tecnologías favoritas
+        {t('name')}
       </h2>
       <div className="flex flex-wrap gap-6 py-10 justify-between sm:justify-start">
         <DynamicIcon

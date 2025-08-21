@@ -1,12 +1,14 @@
 import Card from "../ui/card";
 import DynamicIcon from "../dynamic-icon/dynamic-icon";
 import { SKILLS } from "@/app/constants/skills";
+import { useTranslations } from "next-intl";
 
 export default function Skills() {
+  const t = useTranslations('skills');
   return (
     <section id="skills" className="my-8">
       <h2 className="text-4xl font-semibold text-sky-300">
-        Skills
+        {t('name')}
       </h2>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 justify-center mt-6">
         {SKILLS.map((skill, index) => (

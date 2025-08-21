@@ -1,16 +1,16 @@
-import createMDX from '@next/mdx';
+import createMDX from "@next/mdx";
+import createNextIntlPlugin from 'next-intl/plugin';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-   output: 'standalone',
-   images: {
-      domains: ['avatars.githubusercontent.com'],
-   },
-   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+  output: "standalone",
+  pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
 };
 
 const withMDX = createMDX({
-   extension: /\.(md|mdx)$/
+  extension: /\.(md|mdx)$/,
 });
 
-export default withMDX(nextConfig);
+const withNextIntl = createNextIntlPlugin();
+
+export default withMDX(withNextIntl(nextConfig));
