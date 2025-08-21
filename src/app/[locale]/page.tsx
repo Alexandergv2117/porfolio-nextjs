@@ -1,8 +1,8 @@
 import { useTranslations } from 'next-intl';
+
 import PrincipalTools from '../components/principal-tools/principal-tools';
 import Profile from '../components/profile/profile';
 import Projects from '../components/projects/projects';
-// import Projects from "../components/projects/projects";
 import Skills from '../components/skills/skills';
 import WorkExperience from '../components/work-experience/work-experience';
 
@@ -30,14 +30,11 @@ export default function Home() {
                   </span>
                 </div> */}
                <p className="text-balance text-[#cdcdcd] font-normal sm:text-xl description-experience">
-                  Desarrollador de software con más de dos años de experiencia, enfocado
-                  en backend con <span>Node.js</span> y <span>NestJS</span>. He trabajado
-                  en proyectos complejos, optimizando infraestructura y creando soluciones
-                  escalables. Tengo experiencia con <span>AWS</span>,{' '}
-                  <span>Terraform</span>, <span>Ansible</span>, <span>Docker Swarm</span>{' '}
-                  y <span>Caddy</span>, además de automatizar despliegues con{' '}
-                  <span>GitHub Actions</span>. Aunque mi enfoque es backend, también tengo
-                  conocimientos de frontend con <span>React</span> y <span>Next.js</span>.
+                  {t.rich('description', {
+                     span: (chunks) => (
+                        <span className="text-[#38bdf8] font-medium">{chunks}</span>
+                     ),
+                  })}
                </p>
             </div>
             <PrincipalTools />

@@ -1,18 +1,19 @@
 {
-  "navbar": {
-    "home": "Home",
-    "workExperience": "Work Experience"
-  },
-  "profile": {
-    "position": "Software Engineer"
-  },
-  "tools-technologies": {
-    "name": "Favorite tools and technologies"
-  },
-  "projects": {
-    "name": "Projects"
-  },
-  "skills": {
-    "name": "Skills"
-  }
+   "navbar": {
+      "home": "Home",
+      "workExperience": "Work Experience"
+   },
+   "profile": {
+      "position": "Software Engineer",
+      "description": "Software developer with over two years of experience, focused on backend with <span>Node.js</span> and <span>NestJS</span>. I have worked on complex projects, optimizing infrastructure and building scalable solutions. I have experience with <span>AWS</span>, <span>Terraform</span>, <span>Ansible</span>, <span>Docker Swarm</span>, and <span>Caddy</span>, as well as automating deployments with <span>GitHub Actions</span>. Although my main focus is backend, I also have frontend knowledge with <span>React</span> and <span>Next.js</span>."
+   },
+   "tools-technologies": {
+      "name": "Tools and technologies"
+   },
+   "projects": {
+      "name": "Projects"
+   },
+   "skills": {
+      "name": "Skills"
+   }
 }

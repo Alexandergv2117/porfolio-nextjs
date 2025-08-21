@@ -1,18 +1,19 @@
 {
-  "navbar": {
-    "home": "Inicio",
-    "workExperience": "Experiencia Laboral"
-  },
-  "profile": {
-    "position": "Ingeniero de Software"
-  },
-  "tools-technologies": {
-    "name": "Herramientas y tecnologías favoritas"
-  },
-  "projects": {
-    "name": "Proyectos"
-  },
-  "skills": {
-    "name": "Skills"
-  }
+   "navbar": {
+      "home": "Inicio",
+      "workExperience": "Experiencia Laboral"
+   },
+   "profile": {
+      "position": "Ingeniero de Software",
+      "description": "Desarrollador de software con más de dos años de experiencia, enfocado\nen backend con <span>Node.js</span> y <span>NestJS</span>. He trabajado\nen proyectos complejos, optimizando infraestructura y creando soluciones\nescalables. Tengo experiencia con <span>AWS</span>, <span>Terraform</span>, <span>Ansible</span>, <span>Docker Swarm</span> y <span>Caddy</span>, además de automatizar despliegues con <span>GitHub Actions</span>. Aunque mi enfoque es backend, también tengo conocimientos de frontend con <span>React</span> y <span>Next.js</span>."
+   },
+   "tools-technologies": {
+      "name": "Herramientas y tecnologías"
+   },
+   "projects": {
+      "name": "Proyectos"
+   },
+   "skills": {
+      "name": "Skills"
+   }
 }
