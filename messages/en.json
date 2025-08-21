@@ -1,7 +1,8 @@
 {
    "navbar": {
       "home": "Home",
-      "workExperience": "Work Experience"
+      "workExperience": "Work Experience",
+      "blog": "Blog"
    },
    "profile": {
       "position": "Software Engineer",

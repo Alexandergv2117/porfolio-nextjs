@@ -1,7 +1,8 @@
 {
    "navbar": {
       "home": "Inicio",
-      "workExperience": "Experiencia Laboral"
+      "workExperience": "Experiencia Laboral",
+      "blog": "Blog"
    },
    "profile": {
       "position": "Ingeniero de Software",

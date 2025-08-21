@@ -50,7 +50,7 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased sm:max-w-[60rem] relative flex flex-col justify-center items-center mx-auto px-4 sm:px-2 pb-2`}
       >
         <NextIntlClientProvider>
-          <NavBar />
+          <NavBar locale={locale} />
           {children}
           <Footer />
         </NextIntlClientProvider>
