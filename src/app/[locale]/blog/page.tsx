@@ -29,51 +29,20 @@ export default function Page() {
             {posts.map((post, index) => (
                <Card
                   key={post.slug}
-                  className={`group relative overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 backdrop-blur-sm ${
-                     index === 0 ? 'lg:col-span-2' : ''
-                  }`}>
-                  {/* Featured badge for first post */}
-                  {index === 0 && (
-                     <div className="absolute top-6 left-6 z-10">
-                        <div className="flex items-center gap-2 px-3 py-1 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold rounded-full shadow-lg">
-                           <Bookmark className="w-3 h-3" />
-                           Destacado
-                        </div>
-                     </div>
-                  )}
+                  className={`group relative overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 backdrop-blur-sm ${index === 0 ? 'lg:col-span-1' : ''
+                     }`}>
 
                   {/* Cover Image */}
                   <div className="relative h-48 sm:h-56 overflow-hidden bg-slate-800">
-                     {post.coverImage ? (
+                     <div className="relative w-full aspect-video overflow-hidden rounded-lg">
                         <Image
                            src={post.coverImage}
                            alt={post.title}
                            fill
-                           className="object-cover transition-transform duration-700 group-hover:scale-110"
+                           className="object-cover object-center transition-transform duration-700 group-hover:scale-110"
+                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
-                     ) : (
-                        <div className="w-full h-full flex items-center justify-center bg-slate-800">
-                           <div className="text-center">
-                              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-3">
-                                 <svg
-                                    className="w-8 h-8 text-white"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path
-                                       strokeLinecap="round"
-                                       strokeLinejoin="round"
-                                       strokeWidth={2}
-                                       d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                                    />
-                                 </svg>
-                              </div>
-                              <p className="text-sm font-medium text-slate-400">
-                                 Artículo
-                              </p>
-                           </div>
-                        </div>
-                     )}
+                     </div>
 
                      {/* Gradient overlay */}
                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -85,11 +54,10 @@ export default function Page() {
                      {/* Title */}
                      <Link href={`/blog/${post.slug}`} className="block group">
                         <h2
-                           className={`font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300 leading-tight ${
-                              index === 0
-                                 ? 'text-3xl sm:text-4xl'
-                                 : 'text-2xl sm:text-3xl line-clamp-2'
-                           }`}>
+                           className={`font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300 leading-tight ${index === 0
+                              ? 'text-3xl sm:text-4xl'
+                              : 'text-2xl sm:text-3xl line-clamp-2'
+                              }`}>
                            {post.title}
                         </h2>
                      </Link>
@@ -115,9 +83,8 @@ export default function Page() {
 
                      {/* Excerpt */}
                      <p
-                        className={`text-slate-300 leading-relaxed mb-6 ${
-                           index === 0 ? 'text-lg line-clamp-3' : 'text-base line-clamp-3'
-                        }`}>
+                        className={`text-slate-300 leading-relaxed mb-6 ${index === 0 ? 'text-lg line-clamp-3' : 'text-base line-clamp-3'
+                           }`}>
                         {post.excerpt}
                      </p>
 

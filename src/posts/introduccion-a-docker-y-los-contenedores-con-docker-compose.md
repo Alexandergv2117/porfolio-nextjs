@@ -1,7 +1,7 @@
 ---
 title: "Introducción a Docker y los Contenedores con Docker Compose"
 excerpt: "Descubre cómo usar Docker y Docker Compose para gestionar aplicaciones en contenedores de manera sencilla y eficiente."
-coverImage: "/assets/blog/hello-world/cover.jpg"
+coverImage: "/images/introduccion-a-docker-y-los-contenedores-con-docker-compose.jpeg"
 date: "2024-12-19T08:00:00.000Z"
 author:
   name: Tim Neutkens
