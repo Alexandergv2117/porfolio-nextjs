@@ -53,22 +53,22 @@ jobs:
           .deploy/build_deployment.sh stack="${{ github.event.repository.name }}" environment="${{ env.ENVIRONMENT }}" deployment_dir=".deploy/" image="ghcr.io/$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')/$(echo "${{ github.event.repository.name }}" | tr '[:upper:]' '[:lower:]'):$SHORT_SHA" host="${{ vars.HOST_DNS }}" tls="${{ vars.TLS}}" > /tmp/${{ github.event.repository.name }}.${{ env.ENVIRONMENT }}.deployment.yml
 
       - name: Copy deployment file to server
-        run: scp -o StrictHostKeyChecking=no -P ${{ secrets.HOST_SSH_PORT}} /tmp/${{ github.event.repository.name }}.${{ env.ENVIRONMENT }}.deployment.yml deploy@${{ secrets.HOST_SSH_NAME }}:/tmp/${{ github.event.repository.name }}.${{ env.ENVIRONMENT }}.deployment.yml
+        run: scp -o StrictHostKeyChecking=no -P ${{ secrets.HOST_SSH_PORT}} /tmp/${{ github.event.repository.name }}.${{ env.ENVIRONMENT }}.deployment.yml alex@${{ secrets.HOST_SSH_NAME }}:/tmp/${{ github.event.repository.name }}.${{ env.ENVIRONMENT }}.deployment.yml
 
       - name: Docker login on server
-        run: ssh -o StrictHostKeyChecking=no -p ${{ secrets.HOST_SSH_PORT }} deploy@${{ secrets.HOST_SSH_NAME }} "docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}"
+        run: ssh -o StrictHostKeyChecking=no -p ${{ secrets.HOST_SSH_PORT }} alex@${{ secrets.HOST_SSH_NAME }} "docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}"
 
       - name: Pull image on server
         run: |
           SHORT_SHA=$(git rev-parse --short=7 HEAD)
-          ssh -o StrictHostKeyChecking=no -p ${{ secrets.HOST_SSH_PORT }} deploy@${{ secrets.HOST_SSH_NAME }} "docker pull ghcr.io/$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')/$(echo "${{ github.event.repository.name }}" | tr '[:upper:]' '[:lower:]'):${SHORT_SHA}"
+          ssh -o StrictHostKeyChecking=no -p ${{ secrets.HOST_SSH_PORT }} alex@${{ secrets.HOST_SSH_NAME }} "docker pull ghcr.io/$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')/$(echo "${{ github.event.repository.name }}" | tr '[:upper:]' '[:lower:]'):${SHORT_SHA}"
 
       - name: Deploy to Docker swarm
-        run: ssh -o StrictHostKeyChecking=no -p ${{ secrets.HOST_SSH_PORT }} deploy@${{ secrets.HOST_SSH_NAME }} "docker stack deploy -c /tmp/${{ github.event.repository.name }}.${{ env.ENVIRONMENT }}.deployment.yml ${{ github.event.repository.name }}-${{ env.ENVIRONMENT }}"
+        run: ssh -o StrictHostKeyChecking=no -p ${{ secrets.HOST_SSH_PORT }} alex@${{ secrets.HOST_SSH_NAME }} "docker stack deploy -c /tmp/${{ github.event.repository.name }}.${{ env.ENVIRONMENT }}.deployment.yml ${{ github.event.repository.name }}-${{ env.ENVIRONMENT }}"
 
       # - name: Clean up deployment file on server
       #   if: always()
-      #   run: ssh -o StrictHostKeyChecking=no -p ${{ secrets.HOST_SSH_PORT }} deploy@${{ secrets.HOST_SSH_NAME }} "rm -f /tmp/${{ github.event.repository.name }}.${{ env.ENVIRONMENT }}.deployment.yml"
+      #   run: ssh -o StrictHostKeyChecking=no -p ${{ secrets.HOST_SSH_PORT }} alex@${{ secrets.HOST_SSH_NAME }} "rm -f /tmp/${{ github.event.repository.name }}.${{ env.ENVIRONMENT }}.deployment.yml"
 
       - name: Delete deployment file locally
         if: always()
