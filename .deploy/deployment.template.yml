@@ -28,7 +28,7 @@ services:
         window: 120s
       labels:
         caddy: HOST_PLACEHOLDER
-        caddy.tls: "alexandergv2117@gmail.com"
+        caddy.tls: "/etc/certs/cert.pem /etc/certs/key.pem"
         caddy.reverse_proxy: "{{upstreams 3000}}"
 
 networks:
