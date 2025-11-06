@@ -68,7 +68,7 @@ export default async function RootLayout({
           </Script>
         )}
       </body>
-      {NODE_ENV === "production" && <GoogleAnalytics gaId="G-VNQRKJDSSE" />}
+      {NODE_ENV === "production" && <GoogleAnalytics gaId="G-28T9J5L108" />}
     </html>
   );
 }
