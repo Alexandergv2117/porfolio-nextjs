@@ -3,21 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --background: #1a1a1a;
-  --foreground: #ededed;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #1a1a1a;
-    --foreground: #ededed;
-  }
+  --background: #080808;
+  --foreground: #e8eaed;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
 
 .description-experience span {
@@ -26,20 +19,20 @@ body {
 }
 
 .gradient-text-random {
-  background: radial-gradient(
-    circle at 100%,
-    #facc15,
-    #38bdf8 25%,
-    #2563eb 50%,
-    #1761b1 75%,
-    #facc15 100%
+  background: linear-gradient(
+    135deg,
+    #e2e8f0 0%,
+    #38bdf8 35%,
+    #818cf8 65%,
+    #e2e8f0 100%
   );
-  font-weight: 600;
+  font-weight: 700;
   background-size: 200% auto;
-  color: #000;
+  color: transparent;
   background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: animatedTextGradient 5s linear infinite;
+  animation: animatedTextGradient 7s linear infinite;
 }
 
 @layer utilities {
@@ -54,5 +47,12 @@ body {
   }
   100% {
     background-position: 0% center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gradient-text-random {
+    animation: none;
+    background-position: 50% center;
   }
 }

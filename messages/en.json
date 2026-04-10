@@ -1,7 +1,7 @@
 {
    "navbar": {
       "home": "Home",
-      "workExperience": "Work Experience"
+      "workExperience": "Experience"
    },
    "profile": {
       "position": "Software Engineer",
@@ -10,8 +10,57 @@
    "tools-technologies": {
       "name": "Tools and technologies"
    },
+   "works": {
+      "heading": "Work Experience",
+      "work0": {
+         "title": "Full Stack Developer",
+         "date": "May 2025 - Sept 2025, On-site",
+         "descriptions": [
+            "I develop web applications and pages with Next.js, but identified an improvement opportunity in infrastructure management that lacked standardization and was generating high operational costs.",
+            "I proposed and led the consolidation of multiple dispersed hosting services onto a single VPS, achieving approximately 50% reduction in operational costs, optimizing management with minimal and automated configurations.",
+            "I designed and implemented a Docker Swarm and Caddy Server architecture to host projects, eliminating the need for local builds and manual web server configurations.",
+            "Configured automatic service scaling in Docker Swarm, ensuring stable performance under high user load, and used a Caddy plugin to automate the configuration of reverse proxy rules.",
+            "Automated VPS server configuration using Ansible, ensuring fast and consistent recovery in case of failures, improving the resilience and maintainability of the infrastructure."
+         ]
+      },
+      "work1": {
+         "title": "Backend Developer",
+         "date": "October 2023 - May 2025, On-site",
+         "descriptions": [
+            "Led the migration of a CRM system from a monolithic architecture to microservices, designing and fully developing the backend to improve system performance, scalability, and maintainability.",
+            "Implemented an authentication system with Firebase and ABAC-based authorization using Cerbos, enabling granular permission management and dynamic creation of custom roles.",
+            "Automated server configuration with Ansible and standardized environments using Docker, ensuring consistency and stability across development and production.",
+            "Configured Caddy as an API Gateway with dynamic reverse proxy rules to optimize communication between microservices, and used Docker Swarm for container orchestration.",
+            "Designed CI/CD pipelines with GitHub Actions to automate deployments, integrating a Caddy plugin to dynamically configure reverse proxy rules in deployment files."
+         ]
+      },
+      "work2": {
+         "title": "Full Stack Developer - Internship",
+         "date": "September 2022 - September 2023, Remote",
+         "descriptions": [
+            "Participated in the development of an internal project focused on employee well-being, designed to celebrate team efforts and achievements. Learned and effectively applied the SCRUM methodology, significantly improving my communication and team collaboration skills.",
+            "Improved my programming and complex problem-solving skills. Observed and participated in deployments carried out on AWS, which sparked my interest in infrastructure, AWS, and IaC tools such as Terraform.",
+            "Updated all project dependencies, both backend and frontend, migrating from Node.js 12 to Node.js 18 in the API and from Node.js 14 to Node.js 18 in the frontend, which significantly optimized API performance."
+         ]
+      }
+   },
    "projects": {
-      "name": "Projects"
+      "name": "Projects",
+      "seeProject": "See project",
+      "project0": {
+         "title": "El Epoch",
+         "descriptions": [
+            "Developed the newspaper website for The Epoch Times México, migrating it from WordPress to Next.js and using TailwindCSS for styling. Server Side Rendering (SSR) was implemented to improve SEO and loading speed.",
+            "Configured the server with Docker Swarm and Caddy for application deployment, and set up GitHub Actions for CI/CD."
+         ]
+      },
+      "project1": {
+         "title": "USA Elections 2024",
+         "descriptions": [
+            "Developed a Landing Page for the Special Coverage of the 2024 USA Presidential Elections - The Epoch Times México.",
+            "Used Next.js and TailwindCSS, implementing Static Site Generation (SSG) to optimize performance and consuming data from a WordPress API. Also configured GitHub Actions for automatic deployment, carried out with Docker Swarm and Caddy."
+         ]
+      }
    },
    "skills": {
       "name": "Skills"

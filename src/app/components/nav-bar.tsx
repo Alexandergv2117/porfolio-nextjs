@@ -1,20 +1,28 @@
 import { useTranslations } from "next-intl";
 import MyLink from "./link";
+import LangSwitcher from "./lang-switcher";
 
 export default function NavBar() {
   const t = useTranslations('navbar');
   return (
-    <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 p-2 flex flex-row justify-center items-center rounded-full bg-white bg-opacity-10 backdrop-blur-md w-10/12 sm:w-full min-w-[23rem] sm:min-w-[26rem] max-w-[30rem] z-50">
-      <MyLink href="/" >
-        {t('home')}
-      </MyLink>
-      <MyLink href="#experiencie" >
-        {t('workExperience')}
-      </MyLink>
-      {/* <MyLink href="#projects" >
-        Proyectos
-      </MyLink> */}
-      {/* <SwitchMode /> */}
+    <nav className="fixed top-5 left-1/2 -translate-x-1/2 z-50 w-10/12 sm:w-auto">
+      <div className="flex items-center gap-1 px-2 py-1.5 rounded-full bg-white/[0.06] backdrop-blur-xl border border-white/[0.10] shadow-[0_0_0_1px_rgba(255,255,255,0.03),0_8px_32px_rgba(0,0,0,0.4)]">
+        {/* Nav links */}
+        <div className="flex items-center gap-0.5">
+          <MyLink href="/">
+            {t('home')}
+          </MyLink>
+          <MyLink href="#experiencie">
+            {t('workExperience')}
+          </MyLink>
+        </div>
+
+        {/* Divider */}
+        <div className="w-px h-4 bg-white/10 mx-1" />
+
+        {/* Language switcher */}
+        <LangSwitcher />
+      </div>
     </nav>
   );
 }

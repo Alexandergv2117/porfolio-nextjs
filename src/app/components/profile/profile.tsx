@@ -42,7 +42,7 @@ export default function Profile() {
           </li>
           <li>
             <Link
-              aria-label="Link to Github profile"
+              aria-label="Link to LinkedIn profile"
               href="https://www.linkedin.com/in/alexander-garcia-vizcarra-329765257/"
               target="_blank"
               className="flex rounded-full p-2 bg-white bg-opacity-10 w-auto hover:bg-opacity-20"
