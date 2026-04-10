@@ -5,6 +5,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 
 import NavBar from "../components/nav-bar";
 import SpaceBackground from "../components/space-background";
+import JsonLd from "../components/json-ld";
 import "../globals.css";
 import { KEYWORDS } from "../constants/keywords";
 import Footer from "../components/footer";
@@ -24,14 +25,69 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export const metadata: Metadata = {
-  title: "Alexandergv2117",
-  keywords: KEYWORDS,
-  authors: {
-    name: "Alexander Garcia",
+const BASE_URL = "https://alexandergv2117.dev";
+
+const META = {
+  es: {
+    title: "Alexander Garcia | Ingeniero de Software",
+    description:
+      "Desarrollador de software con más de 2 años de experiencia. Especializado en backend con Node.js y NestJS, infraestructura con Docker, AWS, Terraform y CI/CD con GitHub Actions.",
   },
-  robots: "index, follow",
+  en: {
+    title: "Alexander Garcia | Software Engineer",
+    description:
+      "Software engineer with 2+ years of experience. Specialized in backend with Node.js and NestJS, infrastructure with Docker, AWS, Terraform and CI/CD with GitHub Actions.",
+  },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const lang = locale === "en" ? "en" : "es";
+  const { title, description } = META[lang];
+  const canonical = `${BASE_URL}/${locale}`;
+
+  return {
+    metadataBase: new URL(BASE_URL),
+    title,
+    description,
+    keywords: KEYWORDS,
+    authors: { name: "Alexander Garcia" },
+    robots: { index: true, follow: true },
+    alternates: {
+      canonical,
+      languages: {
+        "es-MX": `${BASE_URL}/es`,
+        "en-US": `${BASE_URL}/en`,
+      },
+    },
+    openGraph: {
+      type: "website",
+      url: canonical,
+      title,
+      description,
+      siteName: "Alexander Garcia — Portfolio",
+      locale: lang === "es" ? "es_MX" : "en_US",
+      images: [
+        {
+          url: "/profile-github.jpg",
+          width: 460,
+          height: 460,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary",
+      title,
+      description,
+      images: ["/profile-github.jpg"],
+    },
+  };
+}
 
 export default async function RootLayout({
   children,
@@ -45,6 +101,9 @@ export default async function RootLayout({
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
+
+  const lang = locale === "en" ? "en" : "es";
+  const { title, description } = META[lang];
 
   return (
     <html lang={locale} className="dark">
@@ -67,19 +126,20 @@ export default async function RootLayout({
             `,
           }}
         />
+        <JsonLd title={title} description={description} locale={locale} />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
         <SpaceBackground />
         <div className="relative z-[1] sm:max-w-[60rem] flex flex-col justify-center items-center mx-auto px-4 sm:px-2 pb-2">
-        <NextIntlClientProvider>
-          <NavBar />
-          {children}
-          <Footer />
-        </NextIntlClientProvider>
+          <NextIntlClientProvider>
+            <NavBar />
+            {children}
+            <Footer />
+          </NextIntlClientProvider>
         </div>
-        {/* 👇 Script de Microsoft Clarity */}
+        {/* Microsoft Clarity */}
         {NODE_ENV === "production" && (
           <Script id="microsoft-clarity" strategy="afterInteractive">
             {`
