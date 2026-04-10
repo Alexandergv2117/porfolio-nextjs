@@ -56,3 +56,24 @@ body {
     background-position: 50% center;
   }
 }
+
+/* Meteor diagonal drift — travels from top/right edges toward bottom-left */
+@keyframes meteor-drift {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  6% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0.75;
+  }
+  98% {
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-110vw, 85vh);
+    opacity: 0;
+  }
+}

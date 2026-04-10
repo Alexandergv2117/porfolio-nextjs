@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 import NavBar from "../components/nav-bar";
+import SpaceBackground from "../components/space-background";
 import "../globals.css";
 import { KEYWORDS } from "../constants/keywords";
 import Footer from "../components/footer";
@@ -68,13 +69,16 @@ export default async function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased sm:max-w-[60rem] relative flex flex-col justify-center items-center mx-auto px-4 sm:px-2 pb-2`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
+        <SpaceBackground />
+        <div className="relative z-[1] sm:max-w-[60rem] flex flex-col justify-center items-center mx-auto px-4 sm:px-2 pb-2">
         <NextIntlClientProvider>
           <NavBar />
           {children}
           <Footer />
         </NextIntlClientProvider>
+        </div>
         {/* 👇 Script de Microsoft Clarity */}
         {NODE_ENV === "production" && (
           <Script id="microsoft-clarity" strategy="afterInteractive">
