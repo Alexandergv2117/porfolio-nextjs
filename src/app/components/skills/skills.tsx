@@ -18,17 +18,18 @@ export default function Skills() {
                 {skill.name}
               </h3>
             </header>
-            <section className="my-6">
-              <div className="grid grid-cols-4 gap-4">
+            <div className="my-6">
+              <div className="grid grid-cols-4 gap-4" role="list" aria-label={`${skill.name} technologies`}>
                 {skill.stack.map((tech, index) => (
-                  <DynamicIcon
-                    key={index + tech}
-                    label={tech}
-                    className="w-[3rem] h-[3rem] sm:w-[3rem] sm:h-[3rem] bg-white/5 p-2 rounded-lg"
-                  />
+                  <div key={index + tech} role="listitem">
+                    <DynamicIcon
+                      label={tech}
+                      className="w-[3rem] h-[3rem] sm:w-[3rem] sm:h-[3rem] bg-white/5 p-2 rounded-lg"
+                    />
+                  </div>
                 ))}
               </div>
-            </section>
+            </div>
           </Card>
         ))}
       </div>

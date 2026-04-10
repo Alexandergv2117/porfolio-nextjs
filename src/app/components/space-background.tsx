@@ -8,6 +8,7 @@ interface Star {
   y: number;
   size: number;
   opacity: number;
+  twinkle: boolean;
 }
 
 interface MeteorConfig {
@@ -46,11 +47,12 @@ export default function SpaceBackground() {
     setReduced(window.matchMedia('(prefers-reduced-motion: reduce)').matches);
 
     // Generate stars only on client to avoid hydration mismatch
-    const generated: Star[] = Array.from({ length: 120 }, () => ({
+    const generated: Star[] = Array.from({ length: 160 }, () => ({
       x: Math.random() * 100,
       y: Math.random() * 100,
-      size: Math.random() * 1.5 + 0.5,
-      opacity: Math.random() * 0.5 + 0.1,
+      size: Math.random() * 1.8 + 0.3,
+      opacity: Math.random() * 0.6 + 0.15,
+      twinkle: Math.random() > 0.7,
     }));
     setStars(generated);
   }, []);
@@ -60,7 +62,7 @@ export default function SpaceBackground() {
       className="fixed inset-0 z-0 overflow-hidden pointer-events-none"
       aria-hidden="true"
     >
-      {/* Stars */}
+      {/* ── Stars ── */}
       {stars.map((s, i) => (
         <div
           key={i}
@@ -71,50 +73,101 @@ export default function SpaceBackground() {
             width: `${s.size}px`,
             height: `${s.size}px`,
             opacity: s.opacity,
+            animation: s.twinkle && !reduced
+              ? `star-twinkle ${2 + (i % 4)}s ease-in-out infinite`
+              : undefined,
           }}
         />
       ))}
 
-      {/* Nebula blobs */}
-      <div
-        className="absolute rounded-full"
-        style={{
-          width: '600px',
-          height: '600px',
-          top: '-10%',
-          right: '-8%',
-          background: 'radial-gradient(circle, rgba(99,102,241,0.07) 0%, transparent 70%)',
-          filter: 'blur(40px)',
-        }}
-      />
-      <div
-        className="absolute rounded-full"
-        style={{
-          width: '500px',
-          height: '500px',
-          top: '40%',
-          left: '-10%',
-          background: 'radial-gradient(circle, rgba(56,189,248,0.05) 0%, transparent 70%)',
-          filter: 'blur(40px)',
-        }}
-      />
-      <div
-        className="absolute rounded-full"
-        style={{
-          width: '400px',
-          height: '400px',
-          bottom: '5%',
-          right: '20%',
-          background: 'radial-gradient(circle, rgba(139,92,246,0.06) 0%, transparent 70%)',
-          filter: 'blur(40px)',
-        }}
-      />
+      {/* ── Nebulae ── */}
 
-      {/* Meteors */}
+      {/* Nebula 1 — blue/indigo cloud, top-right */}
+      <div className="absolute" style={{
+        width: '1000px', height: '700px',
+        top: '-20%', right: '-12%',
+        background: 'radial-gradient(ellipse at 45% 50%, rgba(79,70,229,0.13) 0%, rgba(56,189,248,0.08) 40%, transparent 70%)',
+        filter: 'blur(70px)',
+        transform: 'rotate(-18deg)',
+      }} />
+
+      {/* Nebula 2 — teal wisp, mid-left */}
+      <div className="absolute" style={{
+        width: '800px', height: '450px',
+        top: '28%', left: '-18%',
+        background: 'radial-gradient(ellipse at 55% 45%, rgba(20,184,166,0.09) 0%, rgba(56,189,248,0.05) 45%, transparent 72%)',
+        filter: 'blur(60px)',
+        transform: 'rotate(22deg)',
+      }} />
+
+      {/* Nebula 3 — violet/pink cloud, bottom-center */}
+      <div className="absolute" style={{
+        width: '900px', height: '550px',
+        bottom: '-8%', left: '15%',
+        background: 'radial-gradient(ellipse at 50% 42%, rgba(139,92,246,0.11) 0%, rgba(217,70,239,0.06) 42%, transparent 70%)',
+        filter: 'blur(65px)',
+        transform: 'rotate(-12deg)',
+      }} />
+
+      {/* Nebula 4 — rose filament, mid-right */}
+      <div className="absolute" style={{
+        width: '550px', height: '300px',
+        top: '52%', right: '-4%',
+        background: 'radial-gradient(ellipse at 40% 50%, rgba(244,63,94,0.06) 0%, rgba(168,85,247,0.05) 50%, transparent 72%)',
+        filter: 'blur(50px)',
+        transform: 'rotate(8deg)',
+      }} />
+
+      {/* Nebula 5 — warm amber accent, upper-center */}
+      <div className="absolute" style={{
+        width: '500px', height: '250px',
+        top: '8%', left: '30%',
+        background: 'radial-gradient(ellipse at 50% 50%, rgba(251,191,36,0.04) 0%, rgba(249,115,22,0.03) 50%, transparent 72%)',
+        filter: 'blur(55px)',
+        transform: 'rotate(-5deg)',
+      }} />
+
+      {/* ── Galaxy ── */}
+
+      {/* Outer halo */}
+      <div className="absolute" style={{
+        width: '340px', height: '160px',
+        top: '13%', right: '22%',
+        background: 'radial-gradient(ellipse at 50% 50%, rgba(186,230,253,0.08) 0%, rgba(99,102,241,0.06) 45%, transparent 72%)',
+        filter: 'blur(22px)',
+        transform: 'rotate(-32deg)',
+      }} />
+      {/* Spiral arms */}
+      <div className="absolute" style={{
+        width: '220px', height: '80px',
+        top: '15.5%', right: '24.5%',
+        background: 'radial-gradient(ellipse at 50% 50%, rgba(224,242,254,0.14) 0%, rgba(147,197,253,0.10) 40%, transparent 68%)',
+        filter: 'blur(12px)',
+        transform: 'rotate(-32deg)',
+      }} />
+      {/* Bright core */}
+      <div className="absolute" style={{
+        width: '80px', height: '35px',
+        top: '16.8%', right: '27.2%',
+        background: 'radial-gradient(ellipse at 50% 50%, rgba(255,255,255,0.35) 0%, rgba(186,230,253,0.24) 35%, transparent 65%)',
+        filter: 'blur(6px)',
+        transform: 'rotate(-32deg)',
+      }} />
+      {/* Core star */}
+      <div className="absolute" style={{
+        width: '5px', height: '5px',
+        top: 'calc(17.5% + 14px)', right: 'calc(28.3% + 37px)',
+        background: 'rgba(255,255,255,0.80)',
+        borderRadius: '50%',
+        boxShadow: '0 0 6px 3px rgba(186,230,253,0.4), 0 0 16px 6px rgba(99,102,241,0.2)',
+      }} />
+
+      {/* ── Meteors ── */}
       {!reduced && METEORS.map((m, i) => (
+        // Outer div: handles position + animation only
         <div
           key={i}
-          className="meteor-wrap absolute"
+          className="absolute"
           style={{
             left: `${m.startX}%`,
             top: `${m.startY}%`,
@@ -126,27 +179,47 @@ export default function SpaceBackground() {
             animationFillMode: 'backwards',
           }}
         >
-          {/* Tail */}
-          <div
-            className="absolute"
-            style={{
-              right: `${m.iconPx - 4}px`,
-              top: '50%',
-              width: `${m.tailLen}px`,
-              height: '1.5px',
-              transform: 'translateY(-50%)',
-              background: 'linear-gradient(to left, rgba(56,189,248,0.55), transparent)',
-            }}
-          />
-          {/* Icon */}
-          <div
-            style={{
+          {/* Inner div: tilt to match diagonal direction of travel */}
+          <div style={{ display: 'flex', alignItems: 'center', transform: 'rotate(-34deg)' }}>
+
+            {/* ── Trail (3 layers, extends behind the icon) ── */}
+            <div style={{ position: 'relative', width: `${m.tailLen}px`, height: `${m.iconPx}px`, flexShrink: 0, overflow: 'visible' }}>
+              {/* Layer 1: wide soft glow */}
+              <div style={{
+                position: 'absolute', top: '50%', right: 0,
+                width: '100%', height: '14px',
+                transform: 'translateY(-50%)',
+                background: 'linear-gradient(to right, transparent 0%, rgba(56,189,248,0.18) 55%, rgba(147,197,253,0.38) 100%)',
+                filter: 'blur(7px)',
+              }} />
+              {/* Layer 2: medium glow */}
+              <div style={{
+                position: 'absolute', top: '50%', right: 0,
+                width: '72%', height: '4px',
+                transform: 'translateY(-50%)',
+                background: 'linear-gradient(to right, transparent 0%, rgba(56,189,248,0.58) 45%, rgba(186,230,253,0.82) 100%)',
+                filter: 'blur(2px)',
+              }} />
+              {/* Layer 3: sharp bright core */}
+              <div style={{
+                position: 'absolute', top: '50%', right: 0,
+                width: '42%', height: '1.5px',
+                transform: 'translateY(-50%)',
+                background: 'linear-gradient(to right, transparent 0%, rgba(255,255,255,0.72) 40%, rgba(255,255,255,0.98) 100%)',
+              }} />
+            </div>
+
+            {/* ── Icon with glow halo ── */}
+            <div style={{
               width: `${m.iconPx}px`,
               height: `${m.iconPx}px`,
-              opacity: 0.65,
-            }}
-          >
-            <DynamicIcon label={m.tech} className="w-full h-full" />
+              flexShrink: 0,
+              opacity: 0.82,
+              transform: 'rotate(34deg)',
+              filter: 'drop-shadow(0 0 5px rgba(56,189,248,0.90)) drop-shadow(0 0 14px rgba(99,102,241,0.60))',
+            }}>
+              <DynamicIcon label={m.tech} className="w-full h-full" />
+            </div>
           </div>
         </div>
       ))}

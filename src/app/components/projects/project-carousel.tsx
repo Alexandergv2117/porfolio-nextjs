@@ -24,6 +24,7 @@ export default function ProjectCarousel({ items }: ProjectCarouselProps) {
   const [progress, setProgress] = useState(0);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const progressRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const regionRef = useRef<HTMLDivElement>(null);
 
   const goTo = useCallback((index: number) => {
     setActive(index);
@@ -66,11 +67,23 @@ export default function ProjectCarousel({ items }: ProjectCarouselProps) {
 
   const project = items[active];
 
+  function handleKeyDown(e: React.KeyboardEvent) {
+    if (e.key === 'ArrowRight') { e.preventDefault(); next(); }
+    if (e.key === 'ArrowLeft')  { e.preventDefault(); prev(); }
+    if (e.key === ' ')          { e.preventDefault(); setPaused(p => !p); }
+  }
+
   return (
     <div
+      ref={regionRef}
+      role="region"
+      aria-label="Project showcase"
+      aria-roledescription="carousel"
       className="relative"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
+      onKeyDown={handleKeyDown}
+      tabIndex={0}
     >
       {/* Card — fixed height, every slide identical */}
       <div className="relative rounded-2xl border border-white/[0.09] bg-[#0d0d0d] h-[660px] sm:h-[620px] flex flex-col overflow-hidden">
@@ -129,7 +142,12 @@ export default function ProjectCarousel({ items }: ProjectCarouselProps) {
         )}
 
         {/* Content — flex-1 so it always fills the remaining space */}
-        <div className="flex flex-col flex-1 min-h-0 px-5 pb-5 pt-4 sm:px-7 sm:pb-6 sm:pt-4">
+        <div
+          className="flex flex-col flex-1 min-h-0 px-5 pb-5 pt-4 sm:px-7 sm:pb-6 sm:pt-4"
+          aria-live="polite"
+          aria-atomic="true"
+          aria-label={`Project ${active + 1} of ${items.length}: ${project.title}`}
+        >
 
           {/* Title + meta */}
           <header className="shrink-0 space-y-1 mb-3">
@@ -200,7 +218,7 @@ export default function ProjectCarousel({ items }: ProjectCarouselProps) {
             />
           ))}
           {paused && (
-            <span className="ml-2 text-xs text-white/25 font-mono select-none">paused</span>
+            <span className="ml-2 text-xs text-white/25 font-mono select-none" aria-live="polite">paused</span>
           )}
         </div>
 

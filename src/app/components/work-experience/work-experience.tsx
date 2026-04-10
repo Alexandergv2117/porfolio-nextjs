@@ -5,15 +5,15 @@ import { useTranslations } from 'next-intl';
 import { WORKS } from '@/app/constants/works';
 import DynamicIcon from '../dynamic-icon/dynamic-icon';
 
-// Interactive skill badge — CSS tooltip on hover, glow + scale on hover
+// Interactive skill badge — tooltip on hover AND keyboard focus
 function SkillBadge({ tech }: { tech: string }) {
   return (
-    <div className="relative group">
-      <div className="w-9 h-9 p-1.5 rounded-lg bg-white/[0.05] border border-white/[0.07] group-hover:bg-sky-400/[0.10] group-hover:border-sky-400/40 group-hover:scale-110 transition-all duration-150 cursor-default">
-        <DynamicIcon label={tech} className="w-full h-full" />
+    <div className="relative group" role="img" aria-label={tech} tabIndex={0}>
+      <div className="w-9 h-9 p-1.5 rounded-lg bg-white/[0.05] border border-white/[0.07] group-hover:bg-sky-400/[0.10] group-hover:border-sky-400/40 group-hover:scale-110 group-focus-visible:bg-sky-400/[0.10] group-focus-visible:border-sky-400/40 group-focus-visible:scale-110 transition-all duration-150 cursor-default outline-none">
+        <DynamicIcon label={tech} className="w-full h-full" decorative />
       </div>
-      {/* Tooltip */}
-      <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-0.5 rounded-md bg-[#161616] border border-white/[0.12] text-[11px] font-mono text-white/75 whitespace-nowrap pointer-events-none opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-150 z-20">
+      {/* Tooltip — visible on hover AND keyboard focus */}
+      <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-0.5 rounded-md bg-[#161616] border border-white/[0.12] text-[11px] font-mono text-white/75 whitespace-nowrap pointer-events-none opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 group-focus-visible:opacity-100 group-focus-visible:translate-y-0 transition-all duration-150 z-20">
         {tech}
       </span>
     </div>

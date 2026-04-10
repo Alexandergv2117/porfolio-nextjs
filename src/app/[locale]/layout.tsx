@@ -108,29 +108,15 @@ export default async function RootLayout({
   return (
     <html lang={locale} className="dark">
       <head>
-        {/* Google Tag Manager */}
-        <Script
-          id="gtm-script"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(w,d,s,l,i){
-                w[l]=w[l]||[];
-                w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
-                var f=d.getElementsByTagName(s)[0],
-                    j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
-                j.async=true;
-                j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-                f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-55CTMHMV');
-            `,
-          }}
-        />
         <JsonLd title={title} description={description} locale={locale} />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
+        {/* Skip link — first focusable element for keyboard users */}
+        <a href="#main-content" className="skip-link">
+          {locale === 'es' ? 'Saltar al contenido' : 'Skip to content'}
+        </a>
         <SpaceBackground />
         <div className="relative z-[1] sm:max-w-[60rem] flex flex-col justify-center items-center mx-auto px-4 sm:px-2 pb-2">
           <NextIntlClientProvider>
@@ -139,17 +125,37 @@ export default async function RootLayout({
             <Footer />
           </NextIntlClientProvider>
         </div>
-        {/* Microsoft Clarity */}
         {NODE_ENV === "production" && (
-          <Script id="microsoft-clarity" strategy="afterInteractive">
-            {`
-              (function(c,l,a,r,i,t,y){
-                  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-              })(window, document, "clarity", "script", "u1j1jpvcbb");
-            `}
-          </Script>
+          <>
+            {/* Google Tag Manager */}
+            <Script
+              id="gtm-script"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  (function(w,d,s,l,i){
+                    w[l]=w[l]||[];
+                    w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+                    var f=d.getElementsByTagName(s)[0],
+                        j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+                    j.async=true;
+                    j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+                    f.parentNode.insertBefore(j,f);
+                  })(window,document,'script','dataLayer','GTM-55CTMHMV');
+                `,
+              }}
+            />
+            {/* Microsoft Clarity */}
+            <Script id="microsoft-clarity" strategy="afterInteractive">
+              {`
+                (function(c,l,a,r,i,t,y){
+                    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                })(window, document, "clarity", "script", "u1j1jpvcbb");
+              `}
+            </Script>
+          </>
         )}
       </body>
       {NODE_ENV === "production" && <GoogleAnalytics gaId="G-28T9J5L108" />}

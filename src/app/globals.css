@@ -7,10 +7,47 @@
   --foreground: #e8eaed;
 }
 
+html {
+  /* Smooth scroll for all in-page anchor links */
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+/* Global keyboard focus ring — sky-400, only for keyboard navigation */
+:focus-visible {
+  outline: 2px solid rgba(56, 189, 248, 0.85);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Skip-to-content link — visually hidden until focused */
+.skip-link {
+  position: fixed;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.5rem 1rem;
+  background: #38bdf8;
+  color: #000;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 0 0 8px 8px;
+  transition: top 0.15s ease;
+}
+.skip-link:focus {
+  top: 0;
+  outline: none;
 }
 
 .description-experience span {
@@ -55,6 +92,12 @@ body {
     animation: none;
     background-position: 50% center;
   }
+}
+
+/* Star twinkle */
+@keyframes star-twinkle {
+  0%, 100% { opacity: var(--tw-opacity, 0.4); transform: scale(1); }
+  50%       { opacity: 1;                      transform: scale(1.5); }
 }
 
 /* Meteor diagonal drift — travels from top/right edges toward bottom-left */

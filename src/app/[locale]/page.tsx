@@ -9,13 +9,13 @@ import WorkExperience from '../components/work-experience/work-experience';
 export default function Home() {
    const t = useTranslations('profile');
    return (
-      <main className="w-full mt-28 sm:mt-36 gap-10">
+      <main id="main-content" className="w-full mt-28 sm:mt-36 gap-10">
          <section className="w-full space-y-8 sm:space-y-20 mb-8 sm:mb-16">
             <Profile />
             <div className="w-full flex flex-col gap-8 pt-8 sm:pt-0 sm:pb-20">
-               <h1 className="font-bold text-5xl sm:text-7xl gradient-text-random">
+               <h2 className="font-bold text-5xl sm:text-7xl gradient-text-random">
                   {t('position')}
-               </h1>
+               </h2>
                {/* <div className="text-2xl flex items-center space-x-4">
                   <span className="font-bold text-[#38bdf8]">
                     Backend

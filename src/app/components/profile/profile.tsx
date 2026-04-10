@@ -23,31 +23,37 @@ export default function Profile() {
         className="rounded-full hidden sm:block"
       />
       <div className="flex flex-col justify-center items-start space-y-4">
-        <span className="font-bold text-2xl sm:text-4xl">Alexander Garcia</span>
-        <ul className="flex flex-row gap-6">
+        <h1 className="font-bold text-2xl sm:text-4xl">Alexander Garcia</h1>
+        <ul className="flex flex-row gap-6" aria-label="Social links">
           <li>
             <Link
-              aria-label="Link to Github profile"
+              aria-label="GitHub profile of Alexander Garcia"
               href="https://github.com/Alexandergv2117"
               target="_blank"
+              rel="noopener noreferrer"
               className="flex rounded-full p-2 bg-white bg-opacity-10 w-auto hover:bg-opacity-20"
             >
-              <Github className="w-[1rem] h-[1rem] sm:w-[1.5rem] sm:h-[1.5rem]" />
+              <Github aria-hidden="true" className="w-[1rem] h-[1rem] sm:w-[1.5rem] sm:h-[1.5rem]" />
             </Link>
           </li>
-          <li className="flex rounded-full p-2 bg-white bg-opacity-10 w-auto cursor-pointer hover:bg-opacity-20">
-            <a href="mailto:alexandergv2117@gmail.com" className="flex items-center">
-              <Gmail className="w-[1rem] h-[1rem] sm:w-[1.5rem] sm:h-[1.5rem]" />
+          <li>
+            <a
+              href="mailto:alexandergv2117@gmail.com"
+              aria-label="Send email to Alexander Garcia"
+              className="flex rounded-full p-2 bg-white bg-opacity-10 w-auto hover:bg-opacity-20"
+            >
+              <Gmail aria-hidden="true" className="w-[1rem] h-[1rem] sm:w-[1.5rem] sm:h-[1.5rem]" />
             </a>
           </li>
           <li>
             <Link
-              aria-label="Link to LinkedIn profile"
+              aria-label="LinkedIn profile of Alexander Garcia"
               href="https://www.linkedin.com/in/alexander-garcia-vizcarra-329765257/"
               target="_blank"
+              rel="noopener noreferrer"
               className="flex rounded-full p-2 bg-white bg-opacity-10 w-auto hover:bg-opacity-20"
             >
-              <LinkedIn className="w-[1rem] h-[1rem] sm:w-[1.5rem] sm:h-[1.5rem]" />
+              <LinkedIn aria-hidden="true" className="w-[1rem] h-[1rem] sm:w-[1.5rem] sm:h-[1.5rem]" />
             </Link>
           </li>
         </ul>

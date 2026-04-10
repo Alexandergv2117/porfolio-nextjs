@@ -5,7 +5,7 @@ import LangSwitcher from "./lang-switcher";
 export default function NavBar() {
   const t = useTranslations('navbar');
   return (
-    <nav className="fixed top-5 left-1/2 -translate-x-1/2 z-50 w-10/12 sm:w-auto">
+    <nav aria-label="Main navigation" className="fixed top-5 left-1/2 -translate-x-1/2 z-50 w-10/12 sm:w-auto">
       <div className="flex items-center gap-1 px-2 py-1.5 rounded-full bg-white/[0.06] backdrop-blur-xl border border-white/[0.10] shadow-[0_0_0_1px_rgba(255,255,255,0.03),0_8px_32px_rgba(0,0,0,0.4)]">
         {/* Nav links */}
         <div className="flex items-center gap-0.5">
