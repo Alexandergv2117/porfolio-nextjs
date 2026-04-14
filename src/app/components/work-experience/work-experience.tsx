@@ -99,7 +99,7 @@ function TimelineItem({ title, company, date, descriptions, stack, isLast }: Ite
         }}
       >
         {/* Date chip */}
-        <span className="inline-block text-xs font-mono text-sky-400/70 tracking-wide mb-2">
+        <span className="inline-block font-mono text-sky-400/70 tracking-wide mb-2">
           {date}
         </span>
 
@@ -109,7 +109,7 @@ function TimelineItem({ title, company, date, descriptions, stack, isLast }: Ite
 
           <ul className="space-y-2.5 mb-6">
             {descriptions.map((desc, i) => (
-              <li key={i} className="flex items-start gap-2.5 text-sm text-[#94a3b8] leading-relaxed">
+              <li key={i} className="flex items-start gap-2.5 leading-relaxed">
                 <span className="mt-[0.45rem] shrink-0 w-1 h-1 rounded-full bg-sky-400/50" />
                 {desc}
               </li>
